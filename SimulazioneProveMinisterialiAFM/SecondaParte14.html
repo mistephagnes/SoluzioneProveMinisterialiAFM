@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazioni Contabili - Alfa spa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight-direct {
+            background-color: #ccffcc;
+        }
+        .highlight-indirect {
+            background-color: #ffcccc;
+        }
+        .highlight-choice {
+            background-color: #ffffcc;
+        }
+        .legend {
+            margin-bottom: 20px;
+        }
+        .legend div {
+            display: inline-block;
+            width: 150px;
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        .section-title {
+            margin-top: 40px;
+        }
+         .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<h1>Registrazioni Contabili - Alfa spa</h1>
+
+<div class="legend">
+    <div class="highlight-direct">Dati dai vincoli diretti</div>
+    <div class="highlight-indirect">Dati dai vincoli indiretti</div>
+    <div class="highlight-choice">Dati a scelta</div>
+</div>
+
+<h2 class="section-title">Registrazioni Contabili di Gestione e di Assestamento</h2>
+
+<h3>1. Registrazioni di Gestione</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Descrizione</th>
+            <th>Conto Dare</th>
+            <th>Conto Avere</th>
+            <th>Importo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight-choice">01/01/2013</td>
+            <td class="highlight-choice">Apertura Capitale Sociale</td>
+            <td class="highlight-choice">Banca c/c</td>
+            <td class="highlight-choice">Capitale Sociale</td>
+            <td class="highlight-choice">5,000,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">15/03/2013</td>
+            <td class="highlight-choice">Acquisto Materie Prime</td>
+            <td class="highlight-choice">Materie Prime</td>
+            <td class="highlight-choice">Debiti v/fornitori</td>
+            <td class="highlight-choice">2,600,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">30/06/2013</td>
+            <td class="highlight-choice">Pagamento Debiti v/fornitori</td>
+            <td class="highlight-choice">Debiti v/fornitori</td>
+            <td class="highlight-choice">Banca c/c</td>
+            <td class="highlight-choice">1,500,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">01/09/2013</td>
+            <td class="highlight-choice">Vendita Prodotti Finiti</td>
+            <td class="highlight-choice">Crediti v/clienti</td>
+            <td class="highlight-choice">Ricavi di vendita</td>
+            <td class="highlight-choice">5,000,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">31/12/2013</td>
+            <td class="highlight-choice">Costo del Personale</td>
+            <td class="highlight-choice">Costo del personale</td>
+            <td class="highlight-choice">Debiti v/personale</td>
+            <td class="highlight-choice">800,000</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>2. Registrazioni di Assestamento</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Descrizione</th>
+            <th>Conto Dare</th>
+            <th>Conto Avere</th>
+            <th>Importo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight-choice">31/12/2013</td>
+            <td class="highlight-choice">Ammortamento Immobilizzazioni</td>
+            <td class="highlight-choice">Ammortamento immobilizzazioni</td>
+            <td class="highlight-choice">Fondo ammortamento</td>
+            <td class="highlight-choice">200,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">31/12/2013</td>
+            <td class="highlight-choice">Accantonamento TFR</td>
+            <td class="highlight-choice">TFR</td>
+            <td class="highlight-choice">Fondo TFR</td>
+            <td class="highlight-choice">50,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">31/12/2013</td>
+            <td class="highlight-choice">Svalutazione Crediti</td>
+            <td class="highlight-choice">Svalutazione crediti</td>
+            <td class="highlight-choice">Fondo svalutazione crediti</td>
+            <td class="highlight-choice">100,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-choice">31/12/2013</td>
+            <td class="highlight-choice">Imposte di Esercizio</td>
+            <td class="highlight-choice">Imposte sul reddito</td>
+            <td class="highlight-choice">Debiti v/Erario</td>
+            <td class="highlight-choice">15,000</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Natura dei Conti Utilizzati</h3>
+<p>I conti utilizzati nelle registrazioni contabili sopra descritte sono suddivisi in conti finanziari, economici e patrimoniali. Di seguito la natura dei conti utilizzati:</p>
+<ul>
+    <li><b>Capitale Sociale:</b> Conto patrimoniale - Passivo</li>
+    <li><b>Banca c/c:</b> Conto patrimoniale - Attivo</li>
+    <li><b>Materie Prime:</b> Conto patrimoniale - Attivo</li>
+    <li><b>Debiti v/fornitori:</b> Conto patrimoniale - Passivo</li>
+    <li><b>Crediti v/clienti:</b> Conto patrimoniale - Attivo</li>
+    <li><b>Ricavi di vendita:</b> Conto economico - Reddito</li>
+    <li><b>Costo del personale:</b> Conto economico - Costo</li>
+    <li><b>Debiti v/personale:</b> Conto patrimoniale - Passivo</li>
+    <li><b>Ammortamento immobilizzazioni:</b> Conto economico - Costo</li>
+    <li><b>Fondo ammortamento:</b> Conto patrimoniale - Passivo</li>
+    <li><b>TFR:</b> Conto economico - Costo</li>
+    <li><b>Fondo TFR:</b> Conto patrimoniale - Passivo</li>
+    <li><b>Svalutazione crediti:</b> Conto economico - Costo</li>
+    <li><b>Fondo svalutazione crediti:</b> Conto patrimoniale - Passivo</li>
+    <li><b>Imposte sul reddito:</b> Conto economico - Costo</li>
+    <li><b>Debiti v/Erario:</b> Conto patrimoniale - Passivo</li>
+</ul>
+<h1>Rendiconto Finanziario delle variazioni del patrimonio circolante netto</h1>
+<h2 class="section-title">Bilancio di esercizio 2013 - Alfa spa</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Descrizione</th>
+            <th>Importo (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight"><b>Fonti di finanziamento:</b></td>
+            <td class="highlight"></td>
+        </tr>
+        <tr>
+            <td>Utile netto d'esercizio</td>
+            <td>35,000</td>
+        </tr>
+        <tr>
+            <td>Ammortamenti e accantonamenti</td>
+            <td>200,000</td>
+        </tr>
+        <tr>
+            <td>Accantonamento TFR</td>
+            <td>50,000</td>
+        </tr>
+        <tr>
+            <td>Svalutazione crediti</td>
+            <td>100,000</td>
+        </tr>
+        <tr>
+            <td>Incremento debiti a breve termine</td>
+            <td>1,000,000</td>
+        </tr>
+        <tr>
+            <td>Incremento debiti a lungo termine</td>
+            <td>350,000</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Totale fonti di finanziamento</b></td>
+            <td class="highlight"><b>1,735,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Impieghi di finanziamento:</b></td>
+            <td class="highlight"></td>
+        </tr>
+        <tr>
+            <td>Incremento immobilizzazioni immateriali</td>
+            <td>500,000</td>
+        </tr>
+        <tr>
+            <td>Incremento immobilizzazioni materiali</td>
+            <td>1,500,000</td>
+        </tr>
+        <tr>
+            <td>Incremento immobilizzazioni finanziarie</td>
+            <td>600,000</td>
+        </tr>
+        <tr>
+            <td>Incremento rimanenze</td>
+            <td>700,000</td>
+        </tr>
+        <tr>
+            <td>Incremento crediti</td>
+            <td>1,200,000</td>
+        </tr>
+        <tr>
+            <td>Incremento disponibilità liquide</td>
+            <td>300,000</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Totale impieghi di finanziamento</b></td>
+            <td class="highlight"><b>4,800,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Variazione del patrimonio circolante netto:</b></td>
+            <td class="highlight"></td>
+        </tr>
+        <tr>
+            <td>Patrimonio netto a inizio esercizio</td>
+            <td>5,400,000</td>
+        </tr>
+        <tr>
+            <td>Utile netto d'esercizio</td>
+            <td>35,000</td>
+        </tr>
+        <tr>
+            <td>Incremento riserve</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Patrimonio netto a fine esercizio</b></td>
+            <td class="highlight"><b>5,435,000</b></td>
+        </tr>
+        <h1>Relazione sulla Situazione Finanziaria, Patrimoniale ed Economica di Alfa spa</h1>
+<h2 class="section-title">Al 31/12/2013</h2>
+
+<h3 class="section-title">1. Situazione Patrimoniale</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Voce</th>
+            <th>Importo (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight-direct">Immobilizzazioni Immateriali</td>
+            <td>500,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Immobilizzazioni Materiali</td>
+            <td>1,500,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Immobilizzazioni Finanziarie</td>
+            <td>600,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale Attivo Immobilizzato</b></td>
+            <td><b>2,600,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Rimanenze</td>
+            <td>700,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Crediti</td>
+            <td>1,200,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Disponibilità liquide</td>
+            <td>300,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale Attivo Circolante</b></td>
+            <td><b>2,200,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale Attivo</b></td>
+            <td><b>4,800,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Capitale Sociale</td>
+            <td>5,000,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Riserva Legale</td>
+            <td>400,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Utile d'Esercizio</td>
+            <td>35,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale Patrimonio Netto</b></td>
+            <td><b>5,435,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Debiti a breve termine</td>
+            <td>1,000,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Debiti a lungo termine</td>
+            <td>350,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale Passività</b></td>
+            <td><b>1,350,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale Passivo e Patrimonio Netto</b></td>
+            <td><b>6,785,000</b></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 class="section-title">2. Situazione Economica</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Voce</th>
+            <th>Importo (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight-direct">Ricavi delle vendite e delle prestazioni</td>
+            <td>5,000,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Variazioni delle rimanenze di prodotti in corso di lavorazione, semilavorati e finiti</td>
+            <td>-50,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Altri ricavi e proventi</td>
+            <td>150,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale valore della produzione</b></td>
+            <td><b>5,100,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Costi per materie prime, sussidiarie, di consumo e di merci</td>
+            <td>2,600,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Costi per servizi</td>
+            <td>1,200,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Costi per il personale</td>
+            <td>800,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Ammortamenti e svalutazioni</td>
+            <td>200,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Altri accantonamenti</td>
+            <td>100,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Oneri diversi di gestione</td>
+            <td>100,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Totale costi della produzione</b></td>
+            <td><b>5,000,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Risultato operativo (EBIT)</b></td>
+            <td><b>100,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Proventi e oneri finanziari</td>
+            <td>-50,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Risultato prima delle imposte (EBT)</b></td>
+            <td><b>50,000</b></td>
+        </tr>
+        <tr>
+            <td class="highlight-direct">Imposte sul reddito dell'esercizio</td>
+            <td>15,000</td>
+        </tr>
+        <tr>
+            <td class="highlight-direct"><b>Utile (perdita) d'esercizio</b></td>
+            <td><b>35,000</b></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 class="section-title">3. Indicatori Finanziari</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Indicatore</th>
+            <th>Valore</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight-indirect">ROE (Return on Equity)</td>
+            <td>0.64% (35,000 / 5,435,000)</td>
+        </tr>
+        <tr>
+            <td class="highlight-indirect">ROI (Return on Investment)</td>
+            <td>1.47% (100,000 / 6,785,000)</td>
+        </tr>
+        <tr>
+            <td class="highlight-indirect">ROS (Return on Sales)</td>
+            <td>2.00% (100,000 / 5,000,000)</td>
+        </tr>
+        <tr>
+            <td class="highlight-indirect">Leverage</td>
+            <td>1.25 (6,785,000 / 5,435,000)</td>
+        </tr>
+        <tr>
+            <td class="highlight-indirect">Current Ratio</td>
+            <td>2.20 (2,200,000 / 1,000,000)</td>
+        </tr>
+           <tr>
+            <td class="highlight-indirect">Quick Ratio</td>
+            <td>1.50 (1,500,000 / 1,000,000)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 class="section-title">Commento Finale</h3>
+<p>Dal rendiconto finanziario e dagli indicatori calcolati per l'anno 2013, emerge quanto segue:</p>
+<ul>
+    <li><b>Solidità Patrimoniale:</b> Alfa spa presenta una buona solidità patrimoniale, con un patrimonio netto di €5,435,000 che rappresenta una buona copertura rispetto alle passività totali di €1,350,000. Il leverage (1.25) indica una moderata leva finanziaria, suggerendo che l'azienda non è eccessivamente indebitata.</li>
+    <li><b>Redditività:</b> Gli indicatori di redditività mostrano performance non ottimali. Il ROE (0.64%) e il ROI (1.47%) indicano una redditività modesta. Il ROS (2.00%) suggerisce che la capacità dell'azienda di generare profitto dalle vendite è limitata, implicando margini di profitto ridotti.</li>
+    <li><b>Liquidità:</b> Gli indici di liquidità (Current Ratio di 2.20 e Quick Ratio di 1.50) indicano che Alfa spa ha una buona capacità di far fronte alle obbligazioni a breve termine. Questo suggerisce una gestione prudente della liquidità, che permette all'azienda di mantenere una buona solvibilità a breve termine.</li>
+    <li><b>Gestione Operativa:</b> L'EBIT di €100,000 rappresenta un risultato operativo positivo, ma le spese finanziarie (€50,000) e le imposte (€15,000) riducono significativamente l'utile netto a €35,000. Questo sottolinea l'importanza di ottimizzare i costi operativi e migliorare l'efficienza produttiva per incrementare la redditività netta.</li>
+</ul>
+<p>In conclusione, Alfa spa mostra una buona solidità patrimoniale e una gestione prudente della liquidità. Tuttavia, gli indicatori di redditività suggeriscono la necessità di migliorare i margini operativi e la capacità di generare profitti dalle vendite. Pertanto, per il futuro, l'azienda potrebbe focalizzarsi su strategie di riduzione dei costi, ottimizzazione della produzione e incremento delle vendite per migliorare le performance economiche complessive.</p>
+  <footer>
+    <a class="back-button" href="index.html">Indietro</a>
+ </footer>
+</body>
+</html>

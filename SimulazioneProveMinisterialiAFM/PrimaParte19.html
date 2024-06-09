@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Svolta di Economia Aziendale 2023</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .highlight-green {
+            background-color: #d4f4d4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .highlight-pink {
+            background-color: #f4d4e0;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .highlight-yellow {
+            background-color: #f4f4d4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .code {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .legend {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .legend p {
+            margin: 5px 0;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Analisi del Contesto e dei Dati Disponibili</h2>
+            <p>Alfa spa, impresa operante nel settore della meccanica di precisione, ha un totale degli impieghi di 
+                <span class="highlight-green">1.800.000 euro</span> nell'esercizio 
+                <span class="highlight-green">2021</span>. La società ha conseguito risultati economici positivi nel 
+                <span class="highlight-green">2022</span>, come indicato dai seguenti indicatori economici:</p>
+            <ul>
+                <li><span class="highlight-green">ROS (Return on Sales): 7% nel 2022, 6% nel 2021</span></li>
+                <li><span class="highlight-green">ROI (Return on Investment): 8% nel 2022, 7% nel 2021</span></li>
+                <li><span class="highlight-green">ROE (Return on Equity): 10% nel 2022, 8% nel 2021</span></li>
+                <li><span class="highlight-green">Leverage: 2,5 nel 2022, 1,965 nel 2021</span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Calcolo del Patrimonio Netto e delle Passività</h2>
+            <p>Utilizziamo la formula del leverage per trovare il patrimonio netto (Equity) e il totale delle passività (Debt).</p>
+            <div class="code">
+                <pre>
+                Leverage = Totale Impieghi / Patrimonio Netto
+                2,5 = 1.800.000 / Patrimonio Netto
+                Patrimonio Netto = 1.800.000 / 2,5 = <span class="highlight-green">720.000 euro</span>
+                </pre>
+            </div>
+            <p>Passività (Debt) per il 2022:</p>
+            <div class="code">
+                <pre>
+                Totale Impieghi = Patrimonio Netto + Passività
+                1.800.000 = 720.000 + Passività
+                Passività = 1.800.000 - 720.000 = <span class="highlight-pink">1.080.000 euro</span>
+                </pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Calcolo degli Indicatori di Redditività</h2>
+            <ul>
+                <li>ROS (Return on Sales): 7% nel 2022
+                    <div class="code">
+                        <pre>
+                        ROS = Utile Operativo / Ricavi
+                        0,07 = Utile Operativo / 2.000.000
+                        Utile Operativo = 0,07 * 2.000.000 = <span class="highlight-pink">140.000 euro</span>
+                        </pre>
+                    </div>
+                </li>
+                <li>ROI (Return on Investment): 8% nel 2022
+                    <div class="code">
+                        <pre>
+                        ROI = EBIT / Totale Impieghi
+                        0,08 = 140.000 / 1.800.000
+                        </pre>
+                    </div>
+                </li>
+                <li>ROE (Return on Equity): 10% nel 2022
+                    <div class="code">
+                        <pre>
+                        ROE = Utile Netto / Patrimonio Netto
+                        0,10 = Utile Netto / 720.000
+                        Utile Netto = 0,10 * 720.000 = <span class="highlight-pink">72.000 euro</span>
+                        </pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Stato Patrimoniale e Conto Economico</h2>
+            <h3>Stato Patrimoniale al 31/12/2022</h3>
+            <table>
+                <tr>
+                    <th>Attivo</th>
+                    <th>€</th>
+                    <th>Passivo</th>
+                    <th>€</th>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Immobilizzazioni materiali</td>
+                    <td class="highlight-yellow">800.000</td>
+                    <td>Capitale sociale</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Immobilizzazioni immateriali</td>
+                    <td class="highlight-yellow">200.000</td>
+                    <td>Riserve</td>
+                    <td class="highlight-yellow">148.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Rimanenze</td>
+                    <td class="highlight-yellow">300.000</td>
+                    <td>Utile d’esercizio</td>
+                    <td class="highlight-pink">72.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Crediti verso clienti</td>
+                    <td class="highlight-yellow">350.000</td>
+                    <td>Totale Patrimonio Netto</td>
+                    <td class="highlight-green">720.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Disponibilità liquide</td>
+                    <td class="highlight-yellow">150.000</td>
+                    <td>Debiti verso fornitori</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Debiti finanziari</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Altre passività</td>
+                    <td class="highlight-yellow">80.000</td>
+                </tr>
+                <tr>
+                    <td>Totale Attivo</td>
+                    <td class="highlight-green">1.800.000</td>
+                    <td>Totale Passività</td>
+                    <td class="highlight-pink">1.080.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Totale Passivo e Patrimonio</td>
+                    <td class="highlight-green">1.800.000</td>
+                </tr>
+            </table>
+
+            <h3>Conto Economico al 31/12/2022</h3>
+            <table>
+                <tr>
+                    <th>Voce</th>
+                    <th>€</th>
+                </tr>
+                <tr>
+                    <td>Ricavi delle vendite</td>
+                    <td class="highlight-yellow">2.000.000</td>
+                </tr>
+                <tr>
+                    <td>Costo del venduto</td>
+                    <td class="highlight-yellow">1.200.000</td>
+                </tr>
+                <tr>
+                    <td>Margine lordo</td>
+                    <td class="highlight-pink">800.000</td>
+                </tr>
+                <tr>
+                    <td>Spese generali e amministrative</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td>Utile operativo (EBIT)</td>
+                    <td class="highlight-pink">300.000</td>
+                </tr>
+                <tr>
+                    <td>Oneri finanziari</td>
+                    <td class="highlight-yellow">160.000</td>
+                </tr>
+                <tr>
+                    <td>Utile prima delle imposte</td>
+                    <td class="highlight-pink">140.000</td>
+                </tr>
+                <tr>
+                    <td>Imposte sul reddito</td>
+                    <td class="highlight-yellow">68.000</td>
+                </tr>
+                <tr>
+                    <td>Utile netto</td>
+                    <td class="highlight-pink">72.000</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="legend">
+            <h3>Legenda:</h3>
+            <p><span class="highlight-green">Verde chiaro:</span> Dati che discendono direttamente dai vincoli.</p>
+            <p><span class="highlight-pink">Rosa chiaro:</span> Dati che discendono indirettamente dai vincoli.</p>
+            <p><span class="highlight-yellow">Giallo chiaro:</span> Dati ipotesi/arbitrari.</p>
+        </div>
+
+          <a class="back-button" href="index.html">Indietro</a>
+    </div>
+</body>
+</html>

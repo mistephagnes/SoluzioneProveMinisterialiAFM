@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinazione del Costo Industriale - Gamma Spa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .direct {
+            background-color: #c8e6c9; /* Light green */
+        }
+
+        .indirect {
+            background-color: #ffecb3; /* Light yellow */
+        }
+
+        .chosen {
+            background-color: #ffcdd2; /* Light red */
+        }
+
+        .legend {
+            background-color: #fff3e0;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .calculation {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 2rem;
+        }
+
+        .calculation pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisi e Rendiconto Finanziario Alfa Spa 2017</h1>
+    </header>
+   <nav>
+        <ul>
+            <li><a href="#stato-patrimoniale">Stato Patrimoniale</a></li>
+            <li><a href="#conto-economico">Conto Economico</a></li>
+            <li><a href="#analisi">Analisi Patrimoniale ed Economica</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="legend">
+            <h2>Legenda</h2>
+            <p><span class="direct">Verde Chiaro</span>: Dati che discendono direttamente dai vincoli della traccia.</p>
+            <p><span class="indirect">Giallo Chiaro</span>: Dati che discendono indirettamente dai vincoli della traccia.</p>
+            <p><span class="chosen">Rosa Chiaro</span>: Dati scelti arbitrariamente.</p>
+        </section>
+        <section id="stato-patrimoniale">
+            <h2>Stato Patrimoniale al 31/12/2017</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Impieghi</th>
+                        <th>Importo (€)</th>
+                        <th>Fonti</th>
+                        <th>Importo (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="chosen">Attività Disponibili</td>
+                        <td class="chosen">2.000.000</td>
+                        <td class="chosen">Debiti a Breve Termine</td>
+                        <td class="chosen">7.653.219,8</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Attivo Circolante</td>
+                        <td class="chosen">6.500.000</td>
+                        <td class="chosen">Debiti a Lungo Termine</td>
+                        <td class="chosen">4.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Immobilizzazioni</td>
+                        <td class="chosen">8.500.000</td>
+                        <td class="direct">Capitale Sociale</td>
+                        <td class="direct">3.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Totale Attivo</strong></td>
+                        <td class="indirect"><strong>17.000.000</strong></td>
+                        <td class="chosen">Riserve</td>
+                        <td class="chosen">2.000.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td class="chosen">Utile d'esercizio</td>
+                        <td class="chosen">346.780,2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="indirect"><strong>Totale Passivo</strong></td>
+                        <td colspan="2" class="indirect"><strong>17.000.000</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="conto-economico">
+            <h2>Conto Economico al 31/12/2017</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Voce</th>
+                        <th>Importo (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Ricavi delle vendite</td>
+                        <td class="direct">17.544.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Materie prime</td>
+                        <td class="chosen">5.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Manodopera</td>
+                        <td class="chosen">4.500.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Ammortamenti</td>
+                        <td class="chosen">1.500.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Altri costi operativi</td>
+                        <td class="chosen">6.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Totale Costi</strong></td>
+                        <td class="indirect"><strong>17.000.000</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Risultato operativo</strong></td>
+                        <td class="indirect"><strong>544.000</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Oneri finanziari</td>
+                        <td class="chosen">10.492</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Risultato ante imposte</strong></td>
+                        <td class="indirect"><strong>533.508</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Imposte (35%)</td>
+                        <td class="chosen">186.727,8</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Utile netto</strong></td>
+                        <td class="indirect"><strong>346.780,2</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="analisi">
+            <h2>Analisi Patrimoniale ed Economica</h2>
+            <h3>Indici Patrimoniali</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indice</th>
+                        <th>Formula</th>
+                        <th>Valore</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Elasticità degli Impieghi</td>
+                        <td class="direct">Attivo Circolante / Totale Attivo</td>
+                        <td class="chosen">6.500.000 / 17.000.000 = 0.3824</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Rigidità degli Impieghi</td>
+                        <td class="direct">Attivo Fisso / Totale Attivo</td>
+                        <td class="chosen">8.500.000 / 17.000.000 = 0.5</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Incidenza Debiti Breve</td>
+                        <td class="direct">Debiti a Breve Termine / Totale Passivo</td>
+                        <td class="chosen">7.653.219,8 / 17.000.000 = 0.4502</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Incidenza Debiti Lungo</td>
+                        <td class="direct">Debiti a Lungo Termine / Totale Passivo</td>
+                        <td class="chosen">4.000.000 / 17.000.000 = 0.2353</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Incidenza Capitale Proprio</td>
+                        <td class="direct">Capitale Proprio / Totale Passivo</td>
+                        <td class="chosen">3.000.000 / 17.000.000 = 0.1765</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Grado di Capitalizzazione</td>
+                        <td class="direct">Capitale Proprio / Debiti Totali</td>
+                        <td class="chosen">3.000.000 / 11.653.219,8 = 0.2574</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Indici di Redditività</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indice</th>
+                        <th>Formula</th>
+                        <th>Valore</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">ROD</td>
+                        <td class="direct">Oneri Finanziari / Debiti Totali</td>
+                        <td class="chosen">10.492 / 11.653.219,8 = 0.0009</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">ROI</td>
+                        <td class="direct">Risultato Operativo / Totale Attivo</td>
+                        <td class="chosen">544.000 / 17.000.000 = 0.032</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">ROS</td>
+                        <td class="direct">Risultato Operativo / Ricavi delle Vendite</td>
+                        <td class="chosen">544.000 / 17.544.000 = 0.031</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">ROE</td>
+                        <td class="direct">Utile Netto / Capitale Proprio</td>
+                        <td class="chosen">346.780,2 / 3.000.000 = 0.1156</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Indice di Rotazione degli Impieghi</td>
+                        <td class="direct">Ricavi delle Vendite / Totale Attivo</td>
+                        <td class="chosen">17.544.000 / 17.000.000 = 1.032</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Leverage</td>
+                        <td class="direct">Totale Attivo / Capitale Proprio</td>
+                        <td class="chosen">17.000.000 / 3.000.000 = 5.67</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Leva Finanziaria</td>
+                        <td class="direct">Debiti Totali / Capitale Proprio</td>
+                        <td class="chosen">11.653.219,8 / 3.000.000 = 3.88</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="commenti">
+            <h2>Commenti sugli Indici</h2>
+            <h3>Indici Patrimoniali</h3>
+            <ul>
+                <li><strong>Elasticità degli Impieghi (0.3824):</strong> Indica che una parte consistente degli attivi è costituita da attivo circolante, il che può suggerire una buona flessibilità finanziaria.</li>
+                <li><strong>Rigidità degli Impieghi (0.5):</strong> Indica che il 50% degli attivi è costituito da immobilizzazioni, suggerendo un'azienda con una significativa parte di beni durevoli e investimenti a lungo termine.</li>
+                <li><strong>Incidenza Debiti Breve (0.4502):</strong> Indica che il 45% del passivo è costituito da debiti a breve termine, il che potrebbe comportare rischi di liquidità.</li>
+                <li><strong>Incidenza Debiti Lungo (0.2353):</strong> Indica che il 23.53% del passivo è costituito da debiti a lungo termine, suggerendo un certo equilibrio tra finanziamenti a breve e lungo termine.</li>
+                <li><strong>Incidenza Capitale Proprio (0.1765):</strong> Indica che il capitale proprio rappresenta solo il 17.65% del passivo totale, suggerendo una leva finanziaria piuttosto elevata.</li>
+                <li><strong>Grado di Capitalizzazione (0.2574):</strong> Indica che il capitale proprio è circa il 25.74% dei debiti totali, suggerendo una dipendenza relativamente alta dai finanziamenti esterni.</li>
+            </ul>
+            <h3>Indici di Redditività</h3>
+            <ul>
+                <li><strong>ROD (0.0009):</strong> Indica un costo del debito molto basso, suggerendo che l'azienda sta pagando pochi interessi sui suoi debiti.</li>
+                <li><strong>ROI (0.032):</strong> Indica un ritorno sugli investimenti del 3.2%, suggerendo un'efficienza operativa moderata.</li>
+                <li><strong>ROS (0.031):</strong> Indica che l'azienda sta guadagnando il 3.1% delle vendite come risultato operativo, suggerendo un margine operativo limitato.</li>
+                <li><strong>ROE (0.1156):</strong> Indica un ritorno sul capitale proprio dell'11.56%, suggerendo una buona redditività per gli azionisti.</li>
+                <li><strong>Indice di Rotazione degli Impieghi (1.032):</strong> Indica che l'azienda sta generando un ricavo di circa 1.03 euro per ogni euro investito in attivi, suggerendo una buona efficienza nell'utilizzo delle risorse.</li>
+                <li><strong>Leverage (5.67):</strong> Indica un elevato livello di debito rispetto al capitale proprio, suggerendo un alto rischio finanziario.</li>
+                <li><strong>Leva Finanziaria (3.88):</strong> Indica che i debiti totali sono quasi quattro volte il capitale proprio, suggerendo un alto grado di indebitamento.</li>
+            </ul>
+        </section>
+        </section>
+        <section id="rendiconto">
+            <h2>Rendiconto Finanziario al 31/12/2017</h2>
+            <h3>Flussi finanziari derivanti dall'attività operativa</h3>
+            <ul>
+                <li class="direct">Utile Netto: € 346.780,2</li>
+                <li class="chosen">Ammortamenti: € 1.500.000</li>
+                <li class="chosen">Variazione delle rimanenze: (valore scelto)</li>
+                <li class="chosen">Variazione dei crediti verso clienti: (valore scelto)</li>
+                <li class="chosen">Variazione dei debiti verso fornitori: (valore scelto)</li>
+            </ul>
+            <h3>Flussi finanziari derivanti dall'attività di investimento</h3>
+            <ul>
+                <li class="chosen">Acquisto di immobilizzazioni: (valore scelto)</li>
+                <li class="chosen">Vendita di immobilizzazioni: (valore scelto)</li>
+            </ul>
+            <h3>Flussi finanziari derivanti dall'attività di finanziamento</h3>
+            <ul>
+                <li class="chosen">Incremento/decremento dei debiti a breve termine: (valore scelto)</li>
+                <li class="chosen">Incremento/decremento dei debiti a lungo termine: (valore scelto)</li>
+                <li class="chosen">Dividendi pagati: (valore scelto)</li>
+            </ul>
+            <header>
+        <h1>Scritture di Assestamento Beta Spa 2017</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#assestamento">Scritture di Assestamento</a></li>
+        </ul>
+    </nav>
+    <main>
+       
+        
+            <h2>Scritture di Assestamento al 31/12/2017</h2>
+            <h3>1. Determinazione della quota di TFR maturata nell’esercizio</h3>
+            <p>Calcolo della quota di TFR seguendo i passaggi descritti nel file allegato.</p>
+            <pre class="calculation">
+1° passaggio: Quota dell'esercizio = Salari e stipendi / 13,5
+Quota dell'esercizio = 540.000 / 135 = 4.0000 €
+
+2° passaggio: Rivalsa contributiva = Salari e stipendi * 0,05
+Rivalsa contributiva = 540.000 * 0,05 = 27.000 €
+
+3° passaggio: Quota capitale = Quota dell'esercizio - Rivalsa contributiva
+Quota capitale = 4.0000 - 27.000 = 513.000 €
+
+4° passaggio: Rivalutazione = Debito preesistente 2000.000 * [1,5 + (2 * 75%)]%
+Rivalutazione = 200.000 * [1,5 + (2 * 0,75)]% = 6.000 €
+
+5° passaggio: TFR Lordo = Quota capitale + Rivalutazione
+TFR Lordo = 513.000 + 6.000 = 519.000 €
+
+6° passaggio: Ritenuta fiscale = Rivalutazione * 0,17
+Ritenuta fiscale = 6.000 * 0,17 = 1.020 €
+
+7° passaggio: TFR Netto = TFR Lordo - Ritenuta fiscale
+TFR Netto = 519.000 € - 1.020 = 517.980 €
+            </pre>
+            <p><strong>Scrittura in partita doppia:</strong></p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     TFR                        519.000 €
+           Debiti per TFR                                  517.980 
+31-dic     Ritenuta fiscale                                  1.020
+           Debiti per TFR a bilancio                       517.980 + 200.000          
+            </pre>
+            <h3>2. Patrimonializzazione di costruzione interna di un impianto</h3>
+            <p>Supponiamo che il costo sostenuto nel 2017 per completare l'impianto sia pari a € 120.000.</p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Impianti                   120.000
+           Costruzione interna di impianti                 120.000
+            </pre>
+            <h3>3. Accantonamento per manutenzioni cicliche</h3>
+            <p>Supponiamo che l'accantonamento necessario per le manutenzioni cicliche sia pari a € 20.000.</p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Accantonamento manutenzioni cicliche  20.000
+           Fondo manutenzioni cicliche                 20.000
+            </pre>
+            <h3>4. Svalutazione specifica e generica di crediti</h3>
+            <p>Supponiamo che la svalutazione specifica ammonti a € 10.000 e quella generica al 5% di un totale crediti di € 200.000.</p>
+            <pre class="calculation">
+Svalutazione generica = 200.000 x 0.05 = 10.000 €
+            </pre>
+            <p><strong>Scrittura in partita doppia:</strong></p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Svalutazione crediti       20.000
+           Fondo svalutazione crediti                     20.000
+            </pre>
+            <h3>5. Sospensione di costi relativi al contratto di leasing finanziario</h3>
+            <p>Supponiamo che il maxicanone iniziale pagato sia pari a € 30.000 e che debba essere ripartito su 5 anni.</p>
+            <pre class="calculation">
+Quota annua = 30.000 / 5 = 6.000 €
+            </pre>
+            <p><strong>Scrittura in partita doppia:</strong></p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Macchinari                 30.000
+           Debiti per leasing                             30.000
+31-dic     Debiti per leasing         24.000
+           Ratei e risconti                               24.000
+            </pre>
+        </section>
+        <header>
+        <h1>Determinazione del Costo Industriale - Gamma Spa</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#full-costing">Full Costing</a></li>
+            <li><a href="#abc">Activity Based Costing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="legend">
+            <h2>Legenda</h2>
+            <p><span class="direct">Verde Chiaro</span>: Dati che discendono direttamente dai vincoli della traccia.</p>
+            <p><span class="indirect">Giallo Chiaro</span>: Dati che discendono indirettamente dai vincoli della traccia.</p>
+            <p><span class="chosen">Rosa Chiaro</span>: Dati scelti arbitrariamente.</p>
+        </section>
+        <section id="full-costing">
+            <h2>Full Costing</h2>
+            <h3>Costi Diretti</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrizione</th>
+                        <th>Prodotto A</th>
+                        <th>Prodotto B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Materie Prime</td>
+                        <td class="direct">€ 130.000</td>
+                        <td class="direct">€ 100.000</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Mano d'opera</td>
+                        <td class="direct">€ 195.000</td>
+                        <td class="direct">€ 150.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Costi Indiretti</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrizione</th>
+                        <th>Totale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Generali di Produzione</td>
+                        <td class="direct">€ 240.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Calcolo del Costo Totale per unità</h3>
+            <pre class="calculation">
+Totale Unità Prodotte = 65.000 + 50.000 = 115.000 unità
+Costo Indiretto per unità = 240.000 / 115.000 = 2,087 €/unità
+
+Prodotto A:
+Costo Diretto per unità = (130.000 + 195.000) / 65.000 = 5 €/unità
+Costo Totale per unità di A = 5 + 2,087 = 7,087 €/unità
+
+Prodotto B:
+Costo Diretto per unità = (100.000 + 150.000) / 50.000 = 5 €/unità
+Costo Totale per unità di B = 5 + 2,087 = 7,087 €/unità
+            </pre>
+        </section>
+        <section id="abc">
+            <h2>Activity Based Costing (ABC)</h2>
+            <h3>Costi Diretti</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrizione</th>
+                        <th>Prodotto A</th>
+                        <th>Prodotto B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Materie Prime</td>
+                        <td class="direct">€ 130.000</td>
+                        <td class="direct">€ 100.000</td>
+                    </tr>
+                    <tr>
+                        <td class="direct">Mano d'opera</td>
+                        <td class="direct">€ 195.000</td>
+                        <td class="direct">€ 150.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Costi Indiretti</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attività</th>
+                        <th>Montaggio</th>
+                        <th>Controllo Qualità</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Costo Totale</td>
+                        <td class="direct">€ 150.000</td>
+                        <td class="direct">€ 90.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Calcolo del Costo Totale per unità</h3>
+            <pre class="calculation">
+Driver di Costo:
+Ore di Montaggio per A = 30.000 ore
+Ore di Montaggio per B = 20.000 ore
+Ispezioni di Controllo Qualità per A = 20.000 ispezioni
+Ispezioni di Controllo Qualità per B = 10.000 ispezioni
+
+Costo per driver:
+Costo per Ora di Montaggio = 150.000 / (30.000 + 20.000) = 3 €/ora
+Costo per Ispezione = 90.000 / (20.000 + 10.000) = 3 €/ispezione
+
+Costo delle attività per prodotto:
+Prodotto A:
+Costo Montaggio per A = 30.000 x 3 = 90.000 €
+Costo Controllo Qualità per A = 20.000 x 3 = 60.000 €
+Costo Indiretto per A = (90.000 + 60.000) / 65.000 = 2,31 €/unità
+Costo Totale per unità di A = 5 + 2,31 = 7,31 €/unità
+
+Prodotto B:
+Costo Montaggio per B = 20.000 x 3 = 60.000 €
+Costo Controllo Qualità per B = 10.000 x 3 = 30.000 €
+Costo Indiretto per B = (60.000 + 30.000) / 50.000 = 1,80 €/unità
+Costo Totale per unità di B = 5 + 1,80 = 6,80 €/unità
+            </pre>
+        </section>
+        <footer>
+            <a class="back-button" href="index.html">Indietro</a>
+        </footer>
+    </main>
+</body>
+</html>
+       

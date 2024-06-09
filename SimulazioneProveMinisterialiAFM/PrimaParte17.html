@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzione Esercizio Alfa spa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .highlight-green {
+            background-color: #ccffcc;
+        }
+        .highlight-pink {
+            background-color: #ffccff;
+        }
+        .highlight-yellow {
+            background-color: #ffffcc;
+        }
+        .legend {
+            margin-top: 20px;
+        }
+        .legend span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .button-container button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Soluzione Esercizio Alfa spa</h1>
+    <h2>Budget degli Investimenti per l’Esercizio 2016</h2>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Voce</th>
+                <th>Importo (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="highlight-yellow">Ricerca e sviluppo (R&D)</td>
+                <td class="highlight-yellow">500.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Rinnovo beni strumentali</td>
+                <td class="highlight-yellow">1.500.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Formazione personale</td>
+                <td class="highlight-yellow">200.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Campagna promozionale</td>
+                <td class="highlight-yellow">300.000</td>
+            </tr>
+            <tr>
+                <td><strong>Totale</strong></td>
+                <td class="highlight-yellow"><strong>2.500.000</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Stato Patrimoniale al 31/12/2016 (ipotetico)</h2>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Stato Patrimoniale</th>
+                <th>Importo (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Patrimonio netto al 31/12/2015</td>
+                <td class="highlight-green">9.430.000</td>
+            </tr>
+            <tr>
+                <td>ROE al 31/12/2015 (2,5%)</td>
+                <td class="highlight-green">235.750</td>
+            </tr>
+            <tr>
+                <td>Utile netto previsto 2016 (3%)</td>
+                <td class="highlight-pink">282.900</td>
+            </tr>
+            <tr>
+                <td>Patrimonio netto al 31/12/2016</td>
+                <td class="highlight-pink">9.712.900</td>
+            </tr>
+            <tr>
+                <td>Totale attività (Leverage 2,2)</td>
+                <td class="highlight-green">21.368.380</td>
+            </tr>
+            <tr>
+                <td>Totale debiti</td>
+                <td class="highlight-pink">11.655.480</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Calcoli dettagliati:</h3>
+    <p><span class="highlight-green">Patrimonio netto al 31/12/2015:</span> 9.430.000 euro</p>
+    <p><span class="highlight-green">ROE al 31/12/2015:</span> 2,5% di 9.430.000 = 235.750 euro</p>
+    <p><span class="highlight-pink">Utile netto previsto 2016 (3%):</span> 9.430.000 * 3% = 282.900 euro</p>
+    <p><span class="highlight-pink">Patrimonio netto al 31/12/2016:</span> 9.430.000 + 282.900 = 9.712.900 euro</p>
+    <p><span class="highlight-green">Totale attività (Leverage 2,2):</span> 2,2 * 9.712.900 = 21.368.380 euro</p>
+    <p><span class="highlight-pink">Totale debiti:</span> 21.368.380 - 9.712.900 = 11.655.480 euro</p>
+
+    <h2>Conto Economico al 31/12/2016 (ipotetico)</h2>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Conto Economico</th>
+                <th>Importo (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ricavi delle vendite</td>
+                <td class="highlight-yellow">20.000.000</td>
+            </tr>
+            <tr>
+                <td>Costi operativi</td>
+                <td class="highlight-yellow">17.000.000</td>
+            </tr>
+            <tr>
+                <td>EBITDA</td>
+                <td class="highlight-pink">3.000.000</td>
+            </tr>
+            <tr>
+                <td>Ammortamenti e accantonamenti</td>
+                <td class="highlight-yellow">1.200.000</td>
+            </tr>
+            <tr>
+                <td>EBIT</td>
+                <td class="highlight-pink">1.800.000</td>
+            </tr>
+            <tr>
+                <td>Oneri finanziari</td>
+                <td class="highlight-yellow">500.000</td>
+            </tr>
+            <tr>
+                <td>Risultato ante imposte</td>
+                <td class="highlight-pink">1.300.000</td>
+            </tr>
+            <tr>
+                <td>Imposte sul reddito</td>
+                <td class="highlight-yellow">390.000</td>
+            </tr>
+            <tr>
+                <td>Utile netto</td>
+                <td class="highlight-pink">910.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="legend">
+        <h3>Legenda:</h3>
+        <p><span class="highlight-green"></span> Dati che discendono direttamente dai vincoli</p>
+        <p><span class="highlight-pink"></span> Dati che discendono indirettamente dai vincoli</p>
+        <p><span class="highlight-yellow"></span> Dati scelti arbitrariamente</p>
+    </div>
+
+    <div class="button-container">
+        <button onclick="goBack()">Indietro</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "Index.html";
+        }
+    </script>
+</body>
+</html>

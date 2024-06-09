@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Economico 2017 - Alfa spa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #007BFF;
+        }
+        .highlight-green {
+            background-color: #ccffcc;
+        }
+        .highlight-pink {
+            background-color: #ffccff;
+        }
+        .highlight-yellow {
+            background-color: #ffffcc;
+        }
+        .legend {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .legend span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .button-container button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+          footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Budget Economico 2017 - Alfa spa</h1>
+    <h2>Conto Economico Previsionale per l'Esercizio 2017</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Voce</th>
+                <th>Importo (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="highlight-yellow">Ricavi delle vendite</td>
+                <td class="highlight-yellow">20.600.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Costi operativi</td>
+                <td class="highlight-yellow">17.510.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-pink">EBITDA</td>
+                <td class="highlight-pink">3.090.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Ammortamenti e accantonamenti</td>
+                <td class="highlight-yellow">1.200.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-pink">EBIT</td>
+                <td class="highlight-pink">1.890.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Oneri finanziari</td>
+                <td class="highlight-yellow">500.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-pink">Risultato ante imposte</td>
+                <td class="highlight-pink">1.390.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-yellow">Imposte sul reddito</td>
+                <td class="highlight-yellow">417.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-pink">Utile netto</td>
+                <td class="highlight-pink">973.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Calcoli dettagliati:</h3>
+    <p><span class="highlight-yellow">Ricavi delle vendite:</span> 20.000.000 * 1,03 = 20.600.000 euro</p>
+    <p><span class="highlight-yellow">Costi operativi:</span> 17.000.000 * 1,03 = 17.510.000 euro</p>
+    <p><span class="highlight-pink">EBITDA:</span> 20.600.000 - 17.510.000 = 3.090.000 euro</p>
+    <p><span class="highlight-yellow">Ammortamenti e accantonamenti:</span> 1.200.000 euro (costante)</p>
+    <p><span class="highlight-pink">EBIT:</span> 3.090.000 - 1.200.000 = 1.890.000 euro</p>
+    <p><span class="highlight-yellow">Oneri finanziari:</span> 500.000 euro (costante)</p>
+    <p><span class="highlight-pink">Risultato ante imposte:</span> 1.890.000 - 500.000 = 1.390.000 euro</p>
+    <p><span class="highlight-yellow">Imposte sul reddito:</span> 1.390.000 * 0.30 = 417.000 euro</p>
+    <p><span class="highlight-pink">Utile netto:</span> 1.390.000 - 417.000 = 973.000 euro</p>
+
+    <h1>Analisi Patrimoniale e Finanziaria - Alfa spa</h1>
+    <h2>Bilancio al 31/12/2016</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Voce</th>
+                <th>Importo (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Patrimonio netto</td>
+                <td class="highlight-green">9.712.900</td>
+            </tr>
+            <tr>
+                <td>Totale attività</td>
+                <td class="highlight-green">21.368.380</td>
+            </tr>
+            <tr>
+                <td>Totale debiti</td>
+                <td class="highlight-green">11.655.480</td>
+            </tr>
+            <tr>
+                <td>Ricavi delle vendite</td>
+                <td class="highlight-green">20.000.000</td>
+            </tr>
+            <tr>
+                <td>Utile netto</td>
+                <td class="highlight-green">910.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Indicatori di Bilancio</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Indicatore</th>
+                <th>Formula</th>
+                <th>Valore</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Indice di liquidità corrente</td>
+                <td class="highlight-yellow">Attività correnti / Passività correnti</td>
+                <td class="highlight-yellow">1,6</td>
+            </tr>
+            <tr>
+                <td>Indice di liquidità immediata</td>
+                <td class="highlight-yellow">Attività liquide / Passività correnti</td>
+                <td class="highlight-yellow">0,8</td>
+            </tr>
+            <tr>
+                <td>Indice di solvibilità</td>
+                <td class="highlight-pink">Totale attività / Totale passività</td>
+                <td class="highlight-pink">1,83</td>
+            </tr>
+            <tr>
+                <td>Indice di indebitamento</td>
+                <td class="highlight-pink">Totale passività / Patrimonio netto</td>
+                <td class="highlight-pink">1,20</td>
+            </tr>
+            <tr>
+                <td>ROE</td>
+                <td class="highlight-pink">Utile netto / Patrimonio netto</td>
+                <td class="highlight-pink">9,37%</td>
+            </tr>
+            <tr>
+                <td>ROI</td>
+                <td class="highlight-pink">EBIT / Totale attività</td>
+                <td class="highlight-pink">8,42%</td>
+            </tr>
+            <tr>
+                <td>ROS</td>
+                <td class="highlight-pink">EBIT / Ricavi delle vendite</td>
+                <td class="highlight-pink">9%</td>
+            </tr>
+            <tr>
+                <td>MOL</td>
+                <td class="highlight-pink">15%</td>
+            </tr>
+            <tr>
+                <td>Net Profit Margin</td>
+                <td class="highlight-pink">Utile netto / Ricavi delle vendite</td>
+                <td class="highlight-pink">4,55%</td>
+            </tr>
+            <tr>
+                <td>ROD</td>
+                <td class="highlight-pink">Oneri finanziari / Debiti finanziari</td>
+                <td class="highlight-pink">8,33%</td>
+            </tr>
+            <tr>
+                <td>Leverage</td>
+                <td class="highlight-pink">Totale attività / Patrimonio netto</td>
+                <td class="highlight-pink">2,2</td>
+            </tr>
+            <tr>
+                <td>Indice di rotazione degli impieghi</td>
+                <td class="highlight-pink">Ricavi delle vendite / Totale attività</td>
+                <td class="highlight-pink">0,94</td>
+            </tr>
+            <tr>
+                <td>Leva finanziaria</td>
+                <td class="highlight-pink">ROE / ROI</td>
+                <td class="highlight-pink">1,11</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Calcoli dettagliati:</h3>
+    <p><span class="highlight-yellow">Indice di liquidità corrente:</span> 8.000.000 / 5.000.000 = 1,6</p>
+    <p><span class="highlight-yellow">Indice di liquidità immediata:</span> 4.000.000 / 5.000.000 = 0,8</p>
+    <p><span class="highlight-pink">Indice di solvibilità:</span> 21.368.380 / 11.655.480 = 1,83</p>
+    <p><span class="highlight-pink">Indice di indebitamento:</span> 11.655.480 / 9.712.900 = 1,20</p>
+    <p><span class="highlight-pink">ROE:</span> 910.000 / 9.712.900 * 100 = 9,37%</p>
+    <p><span class="highlight-pink">ROI:</span> 1.800.000 / 21.368.380 * 100 = 8,42%</p>
+    <p><span class="highlight-pink">ROS:</span> 1.800.000 / 20.000.000 * 100 = 9%</p>
+    <p><span class="highlight-pink">MOL:</span> 3.000.000 / 20.000.000 * 100 = 15%</p>
+    <p><span class="highlight-pink">Net Profit Margin:</span> 910.000 / 20.000.000 * 100 = 4,55%</p>
+    <p><span class="highlight-pink">ROD:</span> 500.000 / 6.000.000 * 100 = 8,33%</p>
+    <p><span class="highlight-pink">Leverage:</span> 21.368.380 / 9.712.900 = 2,2</p>
+    <p><span class="highlight-pink">Indice di rotazione degli impieghi:</span> 20.000.000 / 21.368.380 = 0,94</p>
+    <p><span class="highlight-pink">Leva finanziaria:</span> 9,37% / 8,42% = 1,11</p>
+
+    <h3>Commento sull'Analisi</h3>
+    <p><strong>Indice di Liquidità:</strong></p>
+    <p><span class="highlight-yellow">Liquidità corrente (1,6):</span> Un valore superiore a 1 indica che l'azienda è in grado di coprire le sue passività correnti con le sue attività correnti, mostrando una buona gestione della liquidità.</p>
+    <p><span class="highlight-yellow">Liquidità immediata (0,8):</span> Questo valore, inferiore a 1, indica che l'azienda potrebbe avere difficoltà a coprire le passività correnti solo con le attività liquide, suggerendo la necessità di migliorare la gestione della liquidità a breve termine.</p>
+    
+    <p><strong>Indice di Solvibilità (1,83):</strong> Un valore superiore a 1 indica che l'azienda ha un buon livello di solvibilità, essendo in grado di coprire le sue passività totali con le sue attività totali.</p>
+    
+    <p><strong>Indice di Indebitamento (1,20):</strong> Questo valore indica che l'azienda ha un livello moderato di indebitamento. Un valore vicino a 1 suggerisce un equilibrio tra capitale proprio e debiti. Tuttavia, un ulteriore incremento del debito potrebbe aumentare il rischio finanziario.</p>
+    
+    <p><strong>Indicatori di Redditività:</strong></p>
+    <p><span class="highlight-pink">ROE (9,37%):</span> Un ROE positivo e in crescita rispetto al passato (da 2,5% nel 2015 a 9,37% nel 2016) indica che l'azienda sta utilizzando efficacemente il capitale proprio per generare profitto.</p>
+    <p><span class="highlight-pink">ROI (8,42%):</span> Un ROI positivo indica che l'azienda sta utilizzando le sue risorse in modo efficiente per generare reddito operativo.</p>
+    <p><span class="highlight-pink">ROS (9%):</span> Un buon ROS indica che l'azienda riesce a generare un buon margine operativo dalle vendite.</p>
+    <p><span class="highlight-pink">MOL (15%):</span> Un margine operativo lordo elevato mostra che l'azienda ha una buona redditività operativa.</p>
+    <p><span class="highlight-pink">Net Profit Margin (4,55%):</span> Un margine di profitto netto positivo indica che l'azienda riesce a generare utili netti significativi dalle sue vendite.</p>
+    <p><span class="highlight-pink">ROD (8,33%):</span> Il ritorno sul debito è relativamente alto, indicando che i costi di finanziamento del debito sono elevati.</p>
+
+    <p><strong>Leverage (2,2):</strong> Il leverage di 2,2 indica che l'azienda ha 2,2 euro di attività per ogni euro di patrimonio netto, suggerendo un uso significativo del debito per finanziare le attività.</p>
+
+    <p><strong>Indice di Rotazione degli Impieghi (0,94):</strong> Un indice di rotazione degli impieghi inferiore a 1 indica che l'azienda genera meno ricavi delle vendite rispetto al totale delle attività, suggerendo una necessità di migliorare l'efficienza nell'uso delle risorse.</p>
+
+    <p><strong>Leva Finanziaria (1,11):</strong> Una leva finanziaria superiore a 1 indica che l'uso del debito sta amplificando il ritorno per gli azionisti, ma potrebbe anche aumentare il rischio finanziario.</p>
+
+    <h1>Report Analisi Scostamenti - Beta spa</h1>
+    <h2>Analisi delle Vendite per l'Esercizio 2016</h2>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Voce</th>
+                <th>Programmate</th>
+                <th>Effettive</th>
+                <th>Scostamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="highlight-green">Unità vendute</td>
+                <td class="highlight-green">300.000</td>
+                <td class="highlight-green">350.000</td>
+                <td class="highlight-pink">50.000</td>
+            </tr>
+            <tr>
+                <td class="highlight-green">Prezzo unitario</td>
+                <td class="highlight-green">20,00</td>
+                <td class="highlight-green">18,00</td>
+                <td class="highlight-pink">-2,00</td>
+            </tr>
+            <tr>
+                <td class="highlight-green">Vendite totali (euro)</td>
+                <td class="highlight-green">6.000.000</td>
+                <td class="highlight-green">6.300.000</td>
+                <td class="highlight-pink">300.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Calcoli dettagliati:</h3>
+    <p><span class="highlight-green">Vendite programmate:</span> 300.000 unità * 20,00 euro = 6.000.000 euro</p>
+    <p><span class="highlight-green">Vendite effettive:</span> 350.000 unità * 18,00 euro = 6.300.000 euro</p>
+    <p><span class="highlight-pink">Scostamento quantità:</span> (350.000 - 300.000) * 20,00 euro = 50.000 * 20 = 1.000.000 euro</p>
+    <p><span class="highlight-pink">Scostamento prezzo:</span> (18,00 - 20,00) * 350.000 unità = -2,00 * 350.000 = -700.000 euro</p>
+    <p><span class="highlight-pink">Scostamento totale:</span> 1.000.000 euro + (-700.000 euro) = 300.000 euro</p>
+
+    <h3>Commento sull'Analisi</h3>
+    <p><span class="highlight-green">Le vendite effettive</span> sono state maggiori rispetto a quelle programmate, con una differenza positiva di 50.000 unità, generando un aumento delle vendite di 1.000.000 euro.</p>
+    <p><span class="highlight-green">Il prezzo unitario effettivo</span> è stato inferiore a quello programmato di 2,00 euro per unità, causando una diminuzione delle vendite di 700.000 euro.</p>
+    <p><span class="highlight-pink">Lo scostamento totale positivo</span> di 300.000 euro mostra che, nonostante la riduzione del prezzo unitario, l'aumento delle unità vendute ha compensato la perdita, risultando in un incremento complessivo delle vendite.</p>
+  <h1>Calcolo Full Costing - Gamma spa</h1>
+    <h2>Dati di Produzione</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Reparto</th>
+                <th>Costo (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reparto A</td>
+                <td>170.000</td>
+            </tr>
+            <tr>
+                <td>Reparto B</td>
+                <td>80.000</td>
+            </tr>
+            <tr>
+                <td>Reparto C</td>
+                <td>180.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Costi di Produzione per Linea di Scarpe</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Linea di Scarpe</th>
+                <th>Nr. Paia di Scarpe</th>
+                <th>Costo Diretto (euro)</th>
+                <th>Costo Indiretto (euro)</th>
+                <th>Costo Totale (euro)</th>
+                <th>Costo Unitario (euro)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Uomo</td>
+                <td>15.000</td>
+                <td>50.000</td>
+                <td>79.000</td>
+                <td>129.000</td>
+                <td>8,6</td>
+            </tr>
+            <tr>
+                <td>Donna</td>
+                <td>20.000</td>
+                <td>30.000</td>
+                <td>70.000</td>
+                <td>100.000</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Bambino</td>
+                <td>10.000</td>
+                <td>20.000</td>
+                <td>32.000</td>
+                <td>52.000</td>
+                <td>5,2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Calcoli dettagliati:</h3>
+    <p><strong>Totale Costi Diretti:</strong> 50.000 + 30.000 + 20.000 = 100.000 euro</p>
+    <p><strong>Totale Costi Indiretti:</strong> 10.000 + 15.000 + 20.000 + 5.000 = 50.000 euro</p>
+    <p><strong>Totale Costi:</strong> 100.000 + 50.000 = 150.000 euro</p>
+    <p><strong>Coefficiente di Riparto:</strong> 50.000 / 100.000 = 0,5</p>
+    <p><strong>Costo Indiretto per Uomo:</strong> 50.000 * 0,5 = 25.000 euro</p>
+    <p><strong>Costo Indiretto per Donna:</strong> 30.000 * 0,5 = 15.000 euro</p>
+    <p><strong>Costo Indiretto per Bambino:</strong> 20.000 * 0,5 = 10.000 euro</p>
+    <p><strong>Costo Totale per Uomo:</strong> 50.000 + 25.000 = 75.000 euro</p>
+    <p><strong>Costo Totale per Donna:</strong> 30.000 + 15.000 = 45.000 euro</p>
+    <p><strong>Costo Totale per Bambino:</strong> 20.000 + 10.000 = 30.000 euro</p>
+
+    <div class="legend">
+        <h3>Legenda:</h3>
+        <p><span class="highlight-green"></span> Dati che discendono direttamente dai vincoli</p>
+        <p><span class="highlight-pink"></span> Dati che discendono indirettamente dai vincoli</p>
+        <p><span class="highlight-yellow"></span> Dati scelti arbitrariamente</p>
+    </div>
+
+  
+       </section>
+        <footer>
+            <a class="back-button" href="index.html">Indietro</a>
+        </footer>
+</body>
+</html>
+   
+   
+   
+
+   

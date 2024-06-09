@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilancio Alfa Spa 2017</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .direct {
+            background-color: #c8e6c9; /* Light green */
+        }
+
+        .indirect {
+            background-color: #ffecb3; /* Light yellow */
+        }
+
+        .chosen {
+            background-color: #ffcdd2; /* Light red */
+        }
+
+        .legend {
+            background-color: #fff3e0;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+
+        .calculation {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 2rem;
+        }
+
+        .calculation pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bilancio Alfa Spa 2017</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#stato-patrimoniale">Stato Patrimoniale</a></li>
+            <li><a href="#conto-economico">Conto Economico</a></li>
+            <li><a href="#dati-analisi">Analisi dei Dati</a></li>
+            <li><a href="#calcoli">Calcoli</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="legend">
+            <h2>Legenda</h2>
+            <p><span class="direct">Verde Chiaro</span>: Dati che discendono direttamente dai vincoli della traccia.</p>
+            <p><span class="indirect">Giallo Chiaro</span>: Dati che discendono indirettamente dai vincoli della traccia.</p>
+            <p><span class="chosen">Rosa Chiaro</span>: Dati scelti arbitrariamente.</p>
+        </section>
+        <section id="stato-patrimoniale">
+            <h2>Stato Patrimoniale al 31/12/2017</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Impieghi</th>
+                        <th>Importo (€)</th>
+                        <th>Fonti</th>
+                        <th>Importo (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="chosen">Attività Disponibili</td>
+                        <td class="chosen">2.000.000</td>
+                        <td class="chosen">Debiti a Breve Termine</td>
+                        <td class="chosen">7.653.219,8</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Attivo Circolante</td>
+                        <td class="chosen">6.500.000</td>
+                        <td class="chosen">Debiti a Lungo Termine</td>
+                        <td class="chosen">4.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Immobilizzazioni</td>
+                        <td class="chosen">8.500.000</td>
+                        <td class="direct">Capitale Sociale</td>
+                        <td class="direct">3.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Totale Attivo</strong></td>
+                        <td class="indirect"><strong>17.000.000</strong></td>
+                        <td class="chosen">Riserve</td>
+                        <td class="chosen">2.000.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td class="chosen">Utile d'esercizio</td>
+                        <td class="chosen">346.780,2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="indirect"><strong>Totale Passivo</strong></td>
+                        <td colspan="2" class="indirect"><strong>17.000.000</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="conto-economico">
+            <h2>Conto Economico al 31/12/2017</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Voce</th>
+                        <th>Importo (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="direct">Ricavi delle vendite</td>
+                        <td class="direct">17.544.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Materie prime</td>
+                        <td class="chosen">5.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Manodopera</td>
+                        <td class="chosen">4.500.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Ammortamenti</td>
+                        <td class="chosen">1.500.000</td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Altri costi operativi</td>
+                        <td class="chosen">6.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Totale Costi</strong></td>
+                        <td class="indirect"><strong>17.000.000</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Risultato operativo</strong></td>
+                        <td class="indirect"><strong>544.000</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Oneri finanziari</td>
+                        <td class="chosen">10.492</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Risultato ante imposte</strong></td>
+                        <td class="indirect"><strong>533.508</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="chosen">Imposte (35%)</td>
+                        <td class="chosen">186.727,8</td>
+                    </tr>
+                    <tr>
+                        <td class="indirect"><strong>Utile netto</strong></td>
+                        <td class="indirect"><strong>346.780,2</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="dati-analisi">
+            <h2>Analisi dei Dati</h2>
+            <h3>Dati che discendono direttamente dai vincoli della traccia:</h3>
+            <ul class="direct">
+                <li>Capitale Sociale: € 3.000.000</li>
+                <li>Ricavi delle vendite: € 17.544.000</li>
+            </ul>
+            <h3>Dati che discendono indirettamente dai vincoli della traccia:</h3>
+            <ul class="indirect">
+                <li>Totale Attivo: € 17.000.000</li>
+                <li>Totale Passivo: € 17.000.000</li>
+                <li>Totale Costi: € 17.000.000</li>
+                <li>Risultato operativo: € 544.000</li>
+                <li>Risultato ante imposte: € 533.508</li>
+                <li>Utile netto: € 346.780,2</li>
+            </ul>
+            <h3>Dati scelti arbitrariamente:</h3>
+            <ul class="chosen">
+                <li>Attività Disponibili: € 2.000.000</li>
+                <li>Attivo Circolante: € 6.500.000</li>
+                <li>Immobilizzazioni: € 8.500.000</li>
+                <li>Debiti a Breve Termine: € 7.653.219,8</li>
+                <li>Debiti a Lungo Termine: € 4.000.000</li>
+                <li>Riserve: € 2.000.000</li>
+                <li>Utile d'esercizio: € 346.780,2</li>
+                <li>Materie prime: € 5.000.000</li>
+                <li>Manodopera: € 4.500.000</li>
+                <li>Ammortamenti: € 1.500.000</li>
+                <li>Altri costi operativi: € 6.000.000</li>
+                <li>Oneri finanziari: € 10.492</li>
+                <li>Imposte (35%): € 186.727,8</li>
+            </ul>
+        </section>
+        <section id="calcoli">
+            <h2>Calcoli Svolti</h2>
+            <div class="calculation">
+                <h3>Totale degli Impieghi</h3>
+                <pre>
+Totale Impieghi = 3.000.000 / 0.40 = 17.000.000
+                </pre>
+                <h3>Totale Passività</h3>
+                <pre>
+Totale Passività = 17.000.000 - 3.000.000 = 14.000.000
+                </pre>
+                <h3>Valore della Produzione</h3>
+                <pre>
+Valore della Produzione = 17.200.000 * 1,02 = 17.544.000
+                </pre>
+                <h3>Risultato ante imposte</h3>
+                <pre>
+Risultato ante imposte = (523.000 / 17.200.000) * 17.544.000 = 533.508
+                </pre>
+                <h3>Utile netto</h3>
+                <pre>
+Utile netto = 533.508 * (1 - 0.35) = 346.780,2
+                </pre>
+            </div>
+        </section>
+         <section id="rendiconto">
+            <h2>Rendiconto Finanziario al 31/12/2017</h2>
+            <h3>Flussi finanziari derivanti dall'attività operativa</h3>
+            <ul>
+                <li class="direct">Utile Netto: € 346.780,2</li>
+                <li class="chosen">Ammortamenti: € 1.500.000</li>
+                <li class="chosen">Variazione delle rimanenze: (valore scelto)</li>
+                <li class="chosen">Variazione dei crediti verso clienti: (valore scelto)</li>
+                <li class="chosen">Variazione dei debiti verso fornitori: (valore scelto)</li>
+            </ul>
+            <h3>Flussi finanziari derivanti dall'attività di investimento</h3>
+            <ul>
+                <li class="chosen">Acquisto di immobilizzazioni: (valore scelto)</li>
+                <li class="chosen">Vendita di immobilizzazioni: (valore scelto)</li>
+            </ul>
+            <h3>Flussi finanziari derivanti dall'attività di finanziamento</h3>
+            <ul>
+                <li class="chosen">Incremento/decremento dei debiti a breve termine: (valore scelto)</li>
+                <li class="chosen">Incremento/decremento dei debiti a lungo termine: (valore scelto)</li>
+                <li class="chosen">Dividendi pagati: (valore scelto)</li>
+            </ul>
+        </section>
+         <section id="assestamento">
+            <h2>Scritture di Assestamento al 31/12/2017</h2>
+            <h3>1. Determinazione della quota di TFR maturata nell’esercizio</h3>
+            <p>Calcolo della quota di TFR seguendo i passaggi descritti nel file allegato.</p>
+            <pre class="calculation">
+1° passaggio: Quota dell'esercizio = Salari e stipendi / 135
+Quota dell'esercizio = 540.000 / 135 = 4.000 €
+
+2° passaggio: Rivalsa contributiva = Salari e stipendi * 0,06
+Rivalsa contributiva = 540.000 * 0,06 = 32.400 €
+
+3° passaggio: Quota capitale = Quota dell'esercizio - Rivalsa contributiva
+Quota capitale = 4.000 - 32.400 = -28.400 €
+
+4° passaggio: Rivalutazione = Debito preesistente * [0,15 + (2 * 0,75%)]
+Rivalutazione = 200.000 * [0,15 + (2 * 0,0075)] = 33.000 €
+
+5° passaggio: TFR Lordo = Quota capitale + Rivalutazione
+TFR Lordo = -28.400 + 33.000 = 4.600 €
+
+6° passaggio: Ritenuta fiscale = Rivalutazione * 0,17
+Ritenuta fiscale = 33.000 * 0,17 = 5.610 €
+
+7° passaggio: TFR Netto = TFR Lordo - Ritenuta fiscale
+TFR Netto = 4.600 - 5.610 = -1.010 €
+            </pre>
+            <p><strong>Scrittura in partita doppia:</strong></p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     TFR                        4.600
+           Debiti per TFR                                  4.600
+31-dic     Ritenuta fiscale           5.610
+           Debiti per TFR                                  5.610
+            </pre>
+            <h3>2. Patrimonializzazione di costruzione interna di un impianto</h3>
+            <p>Supponiamo che il costo sostenuto nel 2017 per completare l'impianto sia pari a € 120.000.</p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Impianti                   120.000
+           Costruzione interna di impianti                 120.000
+            </pre>
+            <h3>3. Accantonamento per manutenzioni cicliche</h3>
+            <p>Supponiamo che l'accantonamento necessario per le manutenzioni cicliche sia pari a € 20.000.</p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Accantonamento manutenzioni cicliche  20.000
+           Fondo manutenzioni cicliche                 20.000
+            </pre>
+            <h3>4. Svalutazione specifica e generica di crediti</h3>
+            <p>Supponiamo che la svalutazione specifica ammonti a € 10.000 e quella generica al 5% di un totale crediti di € 200.000.</p>
+            <pre class="calculation">
+Svalutazione generica = 200.000 x 0.05 = 10.000 €
+            </pre>
+            <p><strong>Scrittura in partita doppia:</strong></p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Svalutazione crediti       20.000
+           Fondo svalutazione crediti                     20.000
+            </pre>
+            <h3>5. Sospensione di costi relativi al contratto di leasing finanziario</h3>
+            <p>Supponiamo che il maxicanone iniziale pagato sia pari a € 30.000 e che debba essere ripartito su 5 anni.</p>
+            <pre class="calculation">
+Quota annua = 30.000 / 5 = 6.000 €
+            </pre>
+            <p><strong>Scrittura in partita doppia:</strong></p>
+            <pre class="chosen">
+Data       Conto                      Dare (€)            Avere (€)
+31-dic     Macchinari                 30.000
+           Debiti per leasing                             30.000
+31-dic     Debiti per leasing         24.000
+           Ratei e risconti                               24.000
+            </pre>
+        </section>
+        <footer>
+            <a class="back-button" href="index.html">Indietro</a>
+        </footer>
+    </main>
+</body>
+</html>

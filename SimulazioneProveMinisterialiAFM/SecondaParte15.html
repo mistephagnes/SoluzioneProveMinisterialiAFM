@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi di Bilancio - Alfa spa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight-direct {
+            background-color: #ccffcc;
+        }
+        .highlight-indirect {
+            background-color: #ffcccc;
+        }
+        .highlight-choice {
+            background-color: #ffffcc;
+        }
+        .legend {
+            margin-bottom: 20px;
+        }
+        .legend div {
+            display: inline-block;
+            width: 150px;
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        .section-title {
+            margin-top: 40px;
+        }
+         }
+     .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<h1>Analisi di Bilancio - Alfa spa al 31/12/2014</h1>
+
+<div class="legend">
+    <div class="highlight-direct">Dati dai vincoli diretti</div>
+    <div class="highlight-indirect">Dati dai vincoli indiretti</div>
+    <div class="highlight-choice">Dati a scelta</div>
+</div>
+
+<h2>Dati di Base</h2>
+<ul>
+    <li>Utile Netto: 102,000 euro</li>
+    <li>Patrimonio Netto: 1,700,000 euro</li>
+    <li>EBIT (Earnings Before Interest and Taxes): 350,000 euro</li>
+    <li>Totale Attivo: 3,100,000 euro</li>
+    <li>Totale Ricavi (Sales): 5,000,000 euro</li>
+    <li>Totale Costi: 4,700,000 euro</li>
+    <li>Totale Passività: 1,400,000 euro</li>
+    <li>Attivo Circolante: 1,100,000 euro</li>
+    <li>Passivo Corrente: 933,333 euro (2/3 di 1,400,000 euro)</li>
+    <li>Rimanenze: 200,000 euro</li>
+</ul>
+
+<h2 class="section-title">Calcoli e Ragionamenti Effettuati</h2>
+
+<h3>ROE (Return on Equity)</h3>
+<p class="highlight-direct">ROE = Utile Netto / Patrimonio Netto</p>
+<p class="highlight-direct">ROE = 102,000 / 1,700,000 = 6%</p>
+
+<h3>ROI (Return on Investment)</h3>
+<p class="highlight-direct">ROI = EBIT / Totale Attivo</p>
+<p class="highlight-direct">ROI = 350,000 / 3,100,000 = 11.29%</p>
+
+<h3>ROS (Return on Sales)</h3>
+<p class="highlight-direct">ROS = Utile Netto / Totale Ricavi</p>
+<p class="highlight-direct">ROS = 102,000 / 5,000,000 = 2.04%</p>
+
+<h3>Leverage</h3>
+<p class="highlight-direct">Leverage = Totale Attivo / Patrimonio Netto</p>
+<p class="highlight-direct">Leverage = 3,100,000 / 1,700,000 = 1.82</p>
+
+<h3>Current Ratio</h3>
+<p class="highlight-direct">Current Ratio = Attivo Circolante / Passivo Corrente</p>
+<p class="highlight-direct">Current Ratio = 1,100,000 / 933,333 = 1.18</p>
+
+<h3>Quick Ratio</h3>
+<p class="highlight-direct">Quick Ratio = (Attivo Circolante - Rimanenze) / Passivo Corrente</p>
+<p class="highlight-direct">Quick Ratio = (1,100,000 - 200,000) / 933,333 = 0.96</p>
+
+<h2>Analisi degli Indicatori di Bilancio</h2>
+
+<p class="highlight-direct"><b>ROE (Return on Equity):</b> 6%</p>
+<p>Il ROE indica che per ogni euro di capitale proprio, Alfa spa ha generato un utile netto di 0.06 euro. Un ROE del 6% è inferiore alla media di settore dell'8%, suggerendo che l'azienda ha margini di miglioramento in termini di redditività del capitale proprio.</p>
+
+<p class="highlight-direct"><b>ROI (Return on Investment):</b> 11.29%</p>
+<p>Il ROI misura la redditività degli investimenti totali dell'azienda. Con un ROI dell'11.29%, Alfa spa mostra una buona capacità di generare reddito dai suoi investimenti, sebbene sia ancora sotto la media di settore del 12%.</p>
+
+<p class="highlight-direct"><b>ROS (Return on Sales):</b> 2.04%</p>
+<p>Il ROS indica che Alfa spa ha un margine di profitto netto del 2.04% sulle sue vendite. Questo è significativamente inferiore alla media di settore del 10%, suggerendo che l'azienda potrebbe beneficiare di una riduzione dei costi operativi o di un aumento dei prezzi di vendita.</p>
+
+<p class="highlight-direct"><b>Leverage:</b> 1.82</p>
+<p>Il leverage indica che per ogni euro di patrimonio netto, Alfa spa ha 1.82 euro di attività totali. Un leverage basso indica una minore dipendenza dal debito e una maggiore indipendenza finanziaria.</p>
+
+<p class="highlight-direct"><b>Current Ratio:</b> 1.18</p>
+<p>Il current ratio misura la capacità dell'azienda di pagare i debiti a breve termine con le attività a breve termine. Con un current ratio di 1.18, Alfa spa ha una leggera capacità di coprire i suoi debiti a breve termine con le sue attività a breve termine, suggerendo una posizione di liquidità abbastanza solida.</p>
+
+<p class="highlight-direct"><b>Quick Ratio:</b> 0.96</p>
+<p>Il quick ratio esclude le rimanenze e fornisce una visione più conservativa della liquidità dell'azienda. Con un quick ratio di 0.96, Alfa spa è vicina a essere in grado di coprire i suoi debiti a breve termine senza dover vendere le sue rimanenze, il che è positivo ma potrebbe essere migliorato.</p>
+
+<h2>Conclusione</h2>
+<p>L'analisi dei principali indicatori di bilancio di Alfa spa al 31/12/2014 mostra che l'azienda è in una posizione finanziaria e patrimoniale relativamente solida, ma con margini di miglioramento in termini di redditività e liquidità. Gli indici di redditività sono inferiori alla media di settore, suggerendo la necessità di ottimizzare i costi operativi e migliorare i margini di profitto. La posizione di liquidità è adeguata, ma potrebbe beneficiare di un miglioramento nel quick ratio per garantire una maggiore sicurezza finanziaria.</p>
+h1>Budget Economico - Alfa spa 2015</h1>
+
+<h2>Premessa</h2>
+<p>Alfa spa pianifica per l’esercizio 2015 la diversificazione della produzione come emerge dalla Relazione sulla gestione. Di seguito è riportato il budget economico elaborato dall’impresa all’inizio dell’esercizio.</p>
+
+<h2>Budget Economico 2015</h2>
+<table>
+    <tr>
+        <th>Descrizione</th>
+        <th>Importo (euro)</th>
+    </tr>
+    <tr>
+        <td>Ricavi delle vendite e delle prestazioni</td>
+        <td class="highlight-choice">5,500,000</td>
+    </tr>
+    <tr>
+        <td>Variazione delle rimanenze di prodotti in corso di lavorazione, semilavorati e finiti</td>
+        <td class="highlight-choice">50,000</td>
+    </tr>
+    <tr>
+        <td>Altri ricavi e proventi</td>
+        <td class="highlight-choice">150,000</td>
+    </tr>
+    <tr>
+        <td><b>Totale valore della produzione</b></td>
+        <td class="highlight-choice"><b>5,700,000</b></td>
+    </tr>
+    <tr>
+        <td>Costi per materie prime, sussidiarie, di consumo e di merci</td>
+        <td class="highlight-choice">2,750,000</td>
+    </tr>
+    <tr>
+        <td>Costi per servizi</td>
+        <td class="highlight-choice">1,200,000</td>
+    </tr>
+    <tr>
+        <td>Costi per il personale</td>
+        <td class="highlight-choice">850,000</td>
+    </tr>
+    <tr>
+        <td>Ammortamenti e svalutazioni</td>
+        <td class="highlight-choice">220,000</td>
+    </tr>
+    <tr>
+        <td>Altri accantonamenti</td>
+        <td class="highlight-choice">110,000</td>
+    </tr>
+    <tr>
+        <td>Oneri diversi di gestione</td>
+        <td class="highlight-choice">120,000</td>
+    </tr>
+    <tr>
+        <td><b>Totale costi della produzione</b></td>
+        <td class="highlight-choice"><b>5,250,000</b></td>
+    </tr>
+    <tr>
+        <td><b>Differenza tra valore e costi della produzione (EBIT)</b></td>
+        <td class="highlight-choice"><b>450,000</b></td>
+    </tr>
+    <tr>
+        <td>Proventi e oneri finanziari</td>
+        <td class="highlight-choice">-50,000</td>
+    </tr>
+    <tr>
+        <td><b>Risultato prima delle imposte (EBT)</b></td>
+        <td class="highlight-choice"><b>400,000</b></td>
+    </tr>
+    <tr>
+        <td>Imposte sul reddito dell'esercizio</td>
+        <td class="highlight-choice">132,000</td>
+    </tr>
+    <tr>
+        <td><b>Risultato netto dell'esercizio</b></td>
+        <td class="highlight-choice"><b>268,000</b></td>
+    </tr>
+</table>
+
+<h2>Commento</h2>
+<p>Il budget economico per l'esercizio 2015 di Alfa spa prevede una crescita dei ricavi grazie alla diversificazione della produzione. I costi della produzione sono aumentati proporzionalmente, mantenendo comunque un EBIT positivo di 450,000 euro. Il risultato netto previsto è di 268,000 euro, indicando una gestione oculata e profittevole nonostante l'espansione delle attività.</p>
+h1>Piano di Marketing - Beta spa 2015</h1>
+
+<h2>Situazione del Mercato</h2>
+<p>Beta spa opera in un mercato altamente competitivo caratterizzato da una domanda in calo a causa di fattori economici generali. La concorrenza è intensa, con numerosi attori che offrono prodotti simili a prezzi competitivi. Tuttavia, ci sono segmenti di mercato che mostrano ancora una crescita, in particolare quelli orientati alla qualità e all'innovazione.</p>
+
+<h2>Punti di Forza e Debolezza dell'Impresa</h2>
+<h3>Punti di Forza</h3>
+<ul>
+    <li>Brand riconosciuto e rispettato</li>
+    <li>Qualità superiore dei prodotti</li>
+    <li>Rete di distribuzione capillare</li>
+    <li>Team di ricerca e sviluppo innovativo</li>
+</ul>
+<h3>Punti di Debolezza</h3>
+<ul>
+    <li>Prezzi relativamente alti rispetto alla concorrenza</li>
+    <li>Dipendenza da pochi fornitori</li>
+    <li>Presenza limitata nei mercati internazionali</li>
+    <li>Scarsa presenza digitale e online</li>
+</ul>
+
+<h2>Opportunità e Minacce Provenienti dal Mercato</h2>
+<h3>Opportunità</h3>
+<ul>
+    <li>Espansione in nuovi mercati internazionali</li>
+    <li>Aumento della domanda di prodotti di alta qualità</li>
+    <li>Collaborazioni con altre aziende innovative</li>
+    <li>Utilizzo di tecnologie digitali per il marketing e la vendita</li>
+</ul>
+<h3>Minacce</h3>
+<ul>
+    <li>Concorrenza aggressiva sui prezzi</li>
+    <li>Instabilità economica globale</li>
+    <li>Mutamenti normativi sfavorevoli</li>
+    <li>Rischi legati alla supply chain</li>
+</ul>
+
+<h2>Obiettivi da Raggiungere</h2>
+<ul>
+    <li>Aumentare le vendite del 10% rispetto all'anno precedente</li>
+    <li>Espandere la presenza nei mercati internazionali, in particolare in Europa e Asia</li>
+    <li>Migliorare la presenza online e le vendite digitali</li>
+    <li>Rafforzare la brand loyalty e la soddisfazione del cliente</li>
+</ul>
+
+<h2>Leve di Marketing</h2>
+<h3>Prodotto</h3>
+<p class="highlight-choice">Beta spa introdurrà una nuova linea di prodotti innovativi, focalizzati sulla qualità e sulle esigenze emergenti dei consumatori.</p>
+
+<h3>Prezzo</h3>
+<p class="highlight-choice">Verranno introdotte politiche di prezzo più competitive e flessibili, incluse promozioni e sconti per incentivare le vendite.</p>
+
+<h3>Distribuzione</h3>
+<p class="highlight-choice">Espansione della rete di distribuzione internazionale e miglioramento della logistica per garantire una maggiore presenza nei mercati chiave.</p>
+
+<h3>Comunicazione</h3>
+<p class="highlight-choice">Campagne di marketing digitale, utilizzo dei social media, SEO e pubblicità online per raggiungere un pubblico più ampio e migliorare la visibilità del brand.</p>
+
+<h3>Promozione</h3>
+<p class="highlight-choice">Promozioni stagionali, eventi speciali, partecipazione a fiere e partnership con influencer del settore per aumentare l'engagement e le vendite.</p>
+
+<h2>Calcoli e Passaggi Eseguiti</h2>
+<h3>Obiettivo di Aumento delle Vendite</h3>
+<p>Vendite attuali: 4,000,000 euro</p>
+<p class="highlight-direct">Obiettivo di aumento: 10%</p>
+<p class="highlight-direct">Vendite target = Vendite attuali * (1 + Percentuale di aumento)</p>
+<p class="highlight-direct">Vendite target = 4,000,000 * (1 + 0.10) = 4,400,000 euro</p>
+
+<h3>Budget Promozionale</h3>
+<p>Budget attuale: 200,000 euro</p>
+<p class="highlight-direct">Aumento del budget promozionale: 50%</p>
+<p class="highlight-direct">Budget promozionale target = Budget attuale * (1 + Percentuale di aumento)</p>
+<p class="highlight-direct">Budget promozionale target = 200,000 * (1 + 0.50) = 300,000 euro</p>
+<h1>Analisi di Operazioni di Impiego Fondi - Imprese Bancarie</h1>
+
+<h2 class="section-title">Premessa</h2>
+<p>Le imprese bancarie operano sul mercato creditizio attuando operazioni di raccolta e di impiego fondi rispettando vincoli imposti dalla normativa e da una equilibrata gestione aziendale. In questa analisi, verranno esaminate due operazioni di impiego fondi sotto l’aspetto giuridico, tecnico ed economico, evidenziando i riflessi economici e finanziari sui bilanci dell’impresa bancaria e dell’impresa cliente.</p>
+
+<h2 class="section-title">Operazione 1: Finanziamento a Medio-Lungo Termine</h2>
+<h3 class="subsection-title">Aspetto Giuridico</h3>
+<p>Il finanziamento a medio-lungo termine è regolato da un contratto di mutuo. Il contratto stabilisce l'importo del finanziamento, il tasso di interesse, le modalità di rimborso e le eventuali garanzie richieste dalla banca. La normativa vigente impone il rispetto di specifici requisiti di trasparenza e informativa precontrattuale a tutela del cliente.</p>
+
+<h3 class="subsection-title">Aspetto Tecnico</h3>
+<p>Dal punto di vista tecnico, il finanziamento a medio-lungo termine implica l'erogazione di una somma di denaro che il cliente deve restituire secondo un piano di ammortamento prestabilito. Il tasso di interesse può essere fisso o variabile. La banca può richiedere garanzie reali o personali per mitigare il rischio di credito.</p>
+
+<h3 class="subsection-title">Aspetto Economico</h3>
+<p>Economicamente, questa operazione consente al cliente di finanziare investimenti a lungo termine, migliorando la propria capacità produttiva e competitiva. Per la banca, il finanziamento a medio-lungo termine genera interessi attivi, che rappresentano una fonte di reddito significativa.</p>
+
+<h3 class="subsection-title">Riflessi Economici e Finanziari</h3>
+<ul>
+    <li>Bilancio dell'Impresa Bancaria: Incremento degli attivi per il credito concesso e aumento dei ricavi per interessi attivi.</li>
+    <li>Bilancio dell'Impresa Cliente: Aumento delle passività a lungo termine per il finanziamento ottenuto e incremento degli attivi per gli investimenti effettuati.</li>
+</ul>
+
+<h2 class="section-title">Operazione 2: Apertura di Credito in Conto Corrente</h3>
+<h3 class="subsection-title">Aspetto Giuridico</h3>
+<p>L'apertura di credito in conto corrente è disciplinata da un contratto di apertura di credito, che definisce l'importo massimo utilizzabile, il tasso di interesse e le modalità di rimborso. Anche in questo caso, la normativa richiede trasparenza nelle condizioni contrattuali e nelle comunicazioni periodiche al cliente.</p>
+
+<h3 class="subsection-title">Aspetto Tecnico</h3>
+<p>Dal punto di vista tecnico, l'apertura di credito consente al cliente di disporre di una linea di credito flessibile. Il cliente può utilizzare i fondi fino al limite massimo accordato e pagare interessi solo sull'importo effettivamente utilizzato. La banca monitora costantemente l'andamento del conto per garantire la solvibilità del cliente.</p>
+
+<h3 class="subsection-title">Aspetto Economico</h3>
+<p>Economicamente, l'apertura di credito fornisce al cliente una riserva di liquidità per gestire le esigenze di cassa e le eventuali emergenze finanziarie. Per la banca, rappresenta una fonte di interessi attivi, sebbene con un livello di rischio maggiore rispetto ai finanziamenti a lungo termine.</p>
+
+<h3 class="subsection-title">Riflessi Economici e Finanziari</h3>
+<ul>
+    <li>Bilancio dell'Impresa Bancaria: Incremento degli attivi per il credito concesso e potenziale aumento dei ricavi per interessi attivi.</li>
+    <li>Bilancio dell'Impresa Cliente: Incremento delle passività a breve termine per i fondi utilizzati e miglioramento della liquidità aziendale.</li>
+</ul>
+
+<h2 class="section-title">Conclusioni</h2>
+<p>Le operazioni di impiego fondi analizzate mostrano come le imprese bancarie possano supportare finanziariamente le imprese clienti attraverso diverse modalità. I finanziamenti a medio-lungo termine e le aperture di credito in conto corrente offrono soluzioni complementari per soddisfare esigenze di investimento e di liquidità. Entrambe le operazioni hanno riflessi significativi sui bilanci delle imprese coinvolte, evidenziando l'importanza di una gestione oculata e conforme alla normativa vigente.</p>
+ <footer>
+            <a class="back-button" href="index.html">Indietro</a>
+</footer>
+</body>
+</html>

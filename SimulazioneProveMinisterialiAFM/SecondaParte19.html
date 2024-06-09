@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Svolta di Economia Aziendale 2023</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .highlight-green {
+            background-color: #d4f4d4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .highlight-pink {
+            background-color: #f4d4e0;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .highlight-yellow {
+            background-color: #f4f4d4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .code {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .legend {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .legend p {
+            margin: 5px 0;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>1. Budget Economico Annuale per il 2019</h2>
+            <p>**Incremento delle vendite del 5%:**</p>
+            <div class="code">
+                <pre>
+                Ricavi previsti per il 2019 = 2.000.000 * 1,05 = <span class="highlight-green">2.100.000 €</span>
+                </pre>
+            </div>
+            <p>**Incremento dell'utile netto del 2%:**</p>
+            <div class="code">
+                <pre>
+                Utile Netto previsto per il 2019 = 72.000 * 1,02 = <span class="highlight-pink">73.440 €</span>
+                </pre>
+            </div>
+            <p>**Budget Economico Annuale per il 2019:**</p>
+            <table>
+                <tr>
+                    <th>Voce</th>
+                    <th>€</th>
+                </tr>
+                <tr>
+                    <td>Ricavi delle vendite</td>
+                    <td class="highlight-green">2.100.000</td>
+                </tr>
+                <tr>
+                    <td>Costo del venduto</td>
+                    <td class="highlight-yellow">1.236.000</td>
+                </tr>
+                <tr>
+                    <td>Margine lordo</td>
+                    <td class="highlight-pink">864.000</td>
+                </tr>
+                <tr>
+                    <td>Spese generali e amministrative</td>
+                    <td class="highlight-yellow">515.000</td>
+                </tr>
+                <tr>
+                    <td>Utile operativo (EBIT)</td>
+                    <td class="highlight-pink">349.000</td>
+                </tr>
+                <tr>
+                    <td>Oneri finanziari</td>
+                    <td class="highlight-yellow">161.000</td>
+                </tr>
+                <tr>
+                    <td>Utile prima delle imposte</td>
+                    <td class="highlight-pink">188.000</td>
+                </tr>
+                <tr>
+                    <td>Imposte sul reddito</td>
+                    <td class="highlight-yellow">114.560</td>
+                </tr>
+                <tr>
+                    <td>Utile netto</td>
+                    <td class="highlight-pink">73.440</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>2. Analisi Patrimoniale e Finanziaria del Bilancio di Alfa spa al 31/12/2018</h2>
+            <p>**Stato Patrimoniale al 31/12/2018:**</p>
+            <table>
+                <tr>
+                    <th>Attivo</th>
+                    <th>€</th>
+                    <th>Passivo</th>
+                    <th>€</th>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Immobilizzazioni materiali</td>
+                    <td class="highlight-yellow">800.000</td>
+                    <td>Capitale sociale</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Immobilizzazioni immateriali</td>
+                    <td class="highlight-yellow">200.000</td>
+                    <td>Riserve</td>
+                    <td class="highlight-yellow">148.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Rimanenze</td>
+                    <td class="highlight-yellow">300.000</td>
+                    <td>Utile d’esercizio</td>
+                    <td class="highlight-pink">72.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Crediti verso clienti</td>
+                    <td class="highlight-yellow">350.000</td>
+                    <td>Totale Patrimonio Netto</td>
+                    <td class="highlight-green">720.000</td>
+                </tr>
+                <tr>
+                    <td class="highlight-yellow">Disponibilità liquide</td>
+                    <td class="highlight-yellow">150.000</td>
+                    <td>Debiti verso fornitori</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Debiti finanziari</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Altre passività</td>
+                    <td class="highlight-yellow">80.000</td>
+                </tr>
+                <tr>
+                    <td>Totale Attivo</td>
+                    <td class="highlight-green">1.800.000</td>
+                    <td>Totale Passività</td>
+                    <td class="highlight-pink">1.080.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Totale Passivo e Patrimonio</td>
+                    <td class="highlight-green">1.800.000</td>
+                </tr>
+            </table>
+
+            <p>**Conto Economico al 31/12/2018:**</p>
+            <table>
+                <tr>
+                    <th>Voce</th>
+                    <th>€</th>
+                </tr>
+                <tr>
+                    <td>Ricavi delle vendite</td>
+                    <td class="highlight-green">2.000.000</td>
+                </tr>
+                <tr>
+                    <td>Costo del venduto</td>
+                    <td class="highlight-yellow">1.200.000</td>
+                </tr>
+                <tr>
+                    <td>Margine lordo</td>
+                    <td class="highlight-pink">800.000</td>
+                </tr>
+                <tr>
+                    <td>Spese generali e amministrative</td>
+                    <td class="highlight-yellow">500.000</td>
+                </tr>
+                <tr>
+                    <td>Utile operativo (EBIT)</td>
+                    <td class="highlight-pink">300.000</td>
+                </tr>
+                <tr>
+                    <td>Oneri finanziari</td>
+                    <td class="highlight-yellow">160.000</td>
+                </tr>
+                <tr>
+                    <td>Utile prima delle imposte</td>
+                    <td class="highlight-pink">140.000</td>
+                </tr>
+                <tr>
+                    <td>Imposte sul reddito</td>
+                    <td class="highlight-yellow">68.000</td>
+                </tr>
+                <tr>
+                    <td>Utile netto</td>
+                    <td class="highlight-pink">72.000</td>
+                </tr>
+            </table>
+
+            <h3>Indici di Liquidità:</h3>
+            <p>**Indice di liquidità corrente (Current Ratio):**</p>
+            <div class="code">
+                <pre>
+                Current Ratio = Attivo Circolante / Passività Correnti
+                Attivo Circolante = 300.000 + 350.000 + 150.000 = <span class="highlight-yellow">800.000 €</span>
+                Passività Correnti = 500.000 + 80.000 = <span class="highlight-yellow">580.000 €</span>
+                Current Ratio = 800.000 / 580.000 ≈ <span class="highlight-pink">1,38</span>
+                </pre>
+            </div>
+            <p>**Indice di liquidità secca (Quick Ratio):**</p>
+            <div class="code">
+                <pre>
+                Quick Ratio = (Attivo Circolante - Rimanenze) / Passività Correnti
+                Quick Ratio = (800.000 - 300.000) / 580.000 ≈ <span class="highlight-pink">0,86</span>
+                </pre>
+            </div>
+
+            <h3>Indici di Redditività:</h3>
+            <p>**Return on Sales (ROS):**</p>
+            <div class="code">
+                <pre>
+                ROS = Utile Operativo / Ricavi
+                ROS = 300.000 / 2.000.000 = <span class="highlight-pink">0,15 (15%)</span>
+                </pre>
+            </div>
+            <p>**Return on Equity (ROE):**</p>
+            <div class="code">
+                <pre>
+                ROE = Utile Netto / Patrimonio Netto
+                ROE = 72.000 / 720.000 = <span class="highlight-pink">0,10 (10%)</span>
+                </pre>
+            </div>
+            <p>**Return on Investment (ROI):**</p>
+            <div class="code">
+                <pre>
+                ROI = EBIT / Totale Attivo
+                ROI = 300.000 / 1.800.000 ≈ <span class="highlight-pink">0,167 (16,7%)</span>
+                </pre>
+            </div>
+            <p>**Return on Debt (ROD):**</p>
+            <div class="code">
+                <pre>
+                ROD = Oneri Finanziari / Debiti Finanziari
+                ROD = 160.000 / 500.000 = <span class="highlight-pink">0,32 (32%)</span>
+                </pre>
+            </div>
+
+            <h3>Indici di Indebitamento:</h3>
+            <p>**Leverage:**</p>
+            <div class="code">
+                <pre>
+                Leverage = Totale Impieghi / Patrimonio Netto
+                Leverage = 1.800.000 / 720.000 ≈ <span class="highlight-pink">2,5</span>
+                </pre>
+            </div>
+            <p>**Indice di indebitamento (Debt to Equity Ratio):**</p>
+            <div class="code">
+                <pre>
+                Debt to Equity Ratio = Totale Passività / Patrimonio Netto
+                Debt to Equity Ratio = 1.080.000 / 720.000 ≈ <span class="highlight-pink">1,50</span>
+                </pre>
+            </div>
+            <p>**Indice di sostenibilità degli oneri finanziari:**</p>
+            <div class="code">
+                <pre>
+                Indice di sostenibilità degli oneri finanziari = EBIT / Oneri Finanziari
+                Indice di sostenibilità = 300.000 / 160.000 = <span class="highlight-pink">1,875</span>
+                </pre>
+            </div>
+            <p>**Indice di sostenibilità degli impieghi:**</p>
+            <div class="code">
+                <pre>
+                Indice di sostenibilità degli impieghi = Totale Impieghi / Ricavi
+                Indice di sostenibilità degli impieghi = 1.800.000 / 2.000.000 = <span class="highlight-pink">0,90</span>
+                </pre>
+            </div>
+            <p>**Rotazione degli impieghi:**</p>
+            <div class="code">
+                <pre>
+                Rotazione degli impieghi = Ricavi / Totale Impieghi
+                Rotazione degli impieghi = 2.000.000 / 1.800.000 ≈ <span class="highlight-pink">1,11</span>
+                </pre>
+            </div>
+            <p>**Leva finanziaria:**</p>
+            <div class="code">
+                <pre>
+                Leva finanziaria = Totale Passività / Patrimonio Netto
+                Leva finanziaria = 1.080.000 / 720.000 ≈ <span class="highlight-pink">1,5</span>
+                </pre>
+            </div>
+
+            <h3>Analisi dei Risultati Ottenuti:</h3>
+            <p>L'analisi degli indici patrimoniali e finanziari evidenzia quanto segue:</p>
+            <ul>
+                <li>**Indice di liquidità corrente (Current Ratio):** Un valore di 1,38 indica che l'azienda è in grado di coprire le proprie passività correnti con le attività correnti, anche se con un margine di sicurezza ridotto.</li>
+                <li>**Indice di liquidità secca (Quick Ratio):** Un valore di 0,86 mostra una certa difficoltà dell'azienda a coprire le passività correnti senza vendere le rimanenze, segnalando una potenziale area di miglioramento.</li>
+                <li>**Return on Sales (ROS):** Il 15% è un buon risultato, indicando che l'azienda è efficiente nella generazione di profitti dalle vendite.</li>
+                <li>**Return on Equity (ROE):** Un ROE del 10% è positivo, mostrando una buona redditività per gli azionisti.</li>
+                <li>**Return on Investment (ROI):** Un ROI del 16,7% dimostra una buona efficienza nell'uso delle risorse aziendali per generare profitti.</li>
+                <li>**Return on Debt (ROD):** Un ROD del 32% indica un elevato costo del debito, suggerendo che l'azienda dovrebbe cercare di ridurre gli oneri finanziari.</li>
+                <li>**Leverage:** Un valore di 2,5 indica un livello moderato di indebitamento, mostrando che l'azienda utilizza il debito in modo equilibrato per finanziare le proprie attività.</li>
+                <li>**Indice di indebitamento (Debt to Equity Ratio):** Un valore di 1,50 suggerisce che l'azienda ha una quantità significativa di debito rispetto al patrimonio netto, il che può rappresentare un rischio in periodi di incertezza economica.</li>
+                <li>**Indice di sostenibilità degli oneri finanziari:** Un valore di 1,875 mostra che l'azienda è in grado di coprire gli oneri finanziari con l'EBIT, ma potrebbe migliorare questa sostenibilità.</li>
+                <li>**Indice di sostenibilità degli impieghi:** Un valore di 0,90 indica che il totale degli impieghi è quasi in linea con i ricavi, segnalando un utilizzo efficace delle risorse.</li>
+                <li>**Rotazione degli impieghi:** Un valore di 1,11 mostra che l'azienda riesce a generare ricavi leggermente superiori al totale degli impieghi, suggerendo una buona efficienza operativa.</li>
+                <li>**Leva finanziaria:** Un valore di 1,5 evidenzia una dipendenza moderata dal debito per finanziare le attività aziendali, che può essere gestibile se accompagnato da un'adeguata redditività.</li>
+            </ul>
+        </div>
+
+        <!-- Nuove sezioni aggiunte -->
+        <div class="section">
+            <h2>3. Relazione sullo Smobilizzo Crediti per Beta spa</h2>
+            <h3>Introduzione</h3>
+            <p>Beta Spa intende smobilizzare i propri crediti per ottenere le risorse necessarie a fronteggiare gli impegni finanziari di prossima scadenza. Due contratti di smobilizzo crediti che possono essere utilizzati sono:</p>
+            <ul>
+                <li>Factoring</li>
+                <li>Sconto di portafoglio commerciale</li>
+            </ul>
+
+            <h3>Caratteristiche dei contratti di smobilizzo crediti</h3>
+
+            <h4>Factoring</h4>
+            <p><strong>Caratteristiche giuridiche:</strong></p>
+            <ul>
+                <li>Il factoring è un contratto con il quale un'impresa cede i propri crediti commerciali ad una società di factoring.</li>
+                <li>La cessione può essere pro-soluto (senza garanzia per il cedente) o pro-solvendo (con garanzia per il cedente).</li>
+            </ul>
+            <p><strong>Caratteristiche tecniche:</strong></p>
+            <ul>
+                <li>La società di factoring si occupa della gestione, del finanziamento e della riscossione dei crediti.</li>
+                <li>Il finanziamento può essere a breve o a medio termine.</li>
+                <li>La società di factoring anticipa una percentuale del valore nominale dei crediti ceduti, trattenendo una quota a garanzia.</li>
+            </ul>
+            <p><strong>Caratteristiche economiche:</strong></p>
+            <ul>
+                <li>Costi: commissioni di factoring e interessi sull'anticipo ricevuto.</li>
+                <li>Vantaggi: migliora la liquidità aziendale, riduce il rischio di insolvenza, esternalizza la gestione dei crediti.</li>
+            </ul>
+
+            <h4>Sconto di portafoglio commerciale</h4>
+            <p><strong>Caratteristiche giuridiche:</strong></p>
+            <ul>
+                <li>Lo sconto di portafoglio commerciale è un contratto bancario mediante il quale un'impresa cede i propri crediti commerciali ad una banca.</li>
+                <li>La cessione è solitamente pro-solvendo.</li>
+            </ul>
+            <p><strong>Caratteristiche tecniche:</strong></p>
+            <ul>
+                <li>La banca anticipa il valore nominale dei crediti, deducendo gli interessi e le commissioni.</li>
+                <li>Il termine dello sconto coincide con la scadenza del credito ceduto.</li>
+            </ul>
+            <p><strong>Caratteristiche economiche:</strong></p>
+            <ul>
+                <li>Costi: interessi passivi e commissioni di sconto.</li>
+                <li>Vantaggi: fornisce immediata liquidità, migliora la gestione del circolante.</li>
+            </ul>
+
+            <h3>Ipotesi di utilizzo del factoring da parte di Beta Spa</h3>
+            <p>Beta Spa decide di utilizzare il factoring pro-soluto per finanziare il proprio fabbisogno. Supponiamo di cedere crediti per un valore nominale di 100.000 € con un anticipo del 80% e commissioni totali pari a 3.000 €.</p>
+
+            <h3>Scritture contabili</h3>
+
+            <h4>Registrazioni di gestione</h4>
+            <p><strong>Cessione dei crediti a società di factoring:</strong></p>
+            <div class="code">
+                <pre>
+D: Banca c/c (80% di 100.000 €) 80.000 €
+D: Commissioni di factoring 3.000 €
+A: Crediti verso clienti 100.000 €
+A: Debiti verso società di factoring 17.000 €
+                </pre>
+            </div>
+            <p><strong>Rilevazione dell’anticipo ricevuto:</strong></p>
+            <div class="code">
+                <pre>
+D: Debiti verso società di factoring 80.000 €
+A: Banca c/c 80.000 €
+                </pre>
+            </div>
+
+            <h4>Registrazioni di assestamento</h4>
+            <p><strong>Riconoscimento delle commissioni di factoring:</strong></p>
+            <div class="code">
+                <pre>
+D: Oneri finanziari 3.000 €
+A: Commissioni di factoring 3.000 €
+                </pre>
+            </div>
+            <p><strong>Riconoscimento del saldo residuo al momento della scadenza del credito:</strong></p>
+            <div class="code">
+                <pre>
+Se i crediti sono riscossi:
+D: Debiti verso società di factoring 20.000 €
+A: Banca c/c 20.000 €
+                </pre>
+            </div>
+
+            <h3>Riflessi sul bilancio d’esercizio</h3>
+            <p><strong>Stato Patrimoniale:</strong></p>
+            <ul>
+                <li>Diminuzione dei crediti verso clienti.</li>
+                <li>Aumento della liquidità disponibile.</li>
+                <li>Rilevazione di un debito verso la società di factoring.</li>
+            </ul>
+            <p><strong>Conto Economico:</strong></p>
+            <ul>
+                <li>Aumento degli oneri finanziari dovuto alle commissioni di factoring.</li>
+            </ul>
+
+            <h3>Conclusioni</h3>
+            <p>La scelta del factoring consente a Beta Spa di ottenere immediata liquidità, migliorando la gestione del capitale circolante e riducendo il rischio di insolvenza, sebbene a fronte di costi finanziari che impattano il conto economico.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Analisi dello Scostamento dei Ricavi di Gamma spa</h2>
+            <p>Gamma spa, impresa industriale monoprodotto, ha rilevato nell'esercizio 2018 uno scostamento negativo dei ricavi del 12%. Presentiamo le cause che hanno determinato lo scostamento in termini di quantità e di prezzo e forniamo indicazioni per l'elaborazione del budget delle vendite del 2019.</p>
+
+            <h3>Cause dello Scostamento dei Ricavi</h3>
+            <p><strong>Quantità:</strong> La diminuzione delle quantità vendute potrebbe essere dovuta a una riduzione della domanda, all'ingresso di nuovi competitor nel mercato o a problemi di produzione che hanno limitato la disponibilità del prodotto.</p>
+            <p><strong>Prezzo:</strong> La riduzione dei prezzi di vendita può essere conseguenza di una maggiore concorrenza, di una diminuzione del valore percepito del prodotto o di strategie di sconto per incentivare le vendite.</p>
+
+            <h3>Indicazioni per il Budget delle Vendite del 2019</h3>
+            <ul>
+                <li><strong>Analisi di mercato:</strong> Condurre ricerche di mercato per comprendere meglio le esigenze dei clienti e le tendenze del settore.</li>
+                <li><strong>Strategie di prezzo:</strong> Valutare l'efficacia delle strategie di prezzo attuali e considerare la possibilità di diversificare l'offerta con prodotti premium o budget-friendly.</li>
+                <li><strong>Marketing e promozione:</strong> Incrementare gli sforzi di marketing e promozione per aumentare la visibilità del prodotto e attirare nuovi clienti.</li>
+                <li><strong>Miglioramento della qualità:</strong> Investire nel miglioramento della qualità del prodotto per differenziarlo dalla concorrenza e aumentarne il valore percepito.</li>
+                <li><strong>Espansione geografica:</strong> Esplorare nuovi mercati nazionali e internazionali per aumentare la base clienti e le opportunità di vendita.</li>
+            </ul>
+        </div>
+
+        <div class="legend">
+            <h3>Legenda:</h3>
+            <p><span class="highlight-green">Verde chiaro:</span> Dati che discendono direttamente dai vincoli.</p>
+            <p><span class="highlight-pink">Rosa chiaro:</span> Dati che discendono indirettamente dai vincoli.</p>
+            <p><span class="highlight-yellow">Giallo chiaro:</span> Dati ipotesi/arbitrari.</p>
+        </div>
+
+        <a class="back-button" href="index.html">Indietro</a>
+    </div>
+</body>
+</html>
